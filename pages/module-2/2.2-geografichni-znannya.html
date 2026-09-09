@@ -1,0 +1,231 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv9{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv9, .ctv9 *{box-sizing:border-box;}
+  .ctv9{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:840px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv9 header.hero{padding:32px 0 24px; border-bottom:2px solid var(--navy);}
+  .ctv9 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv9 h1{font-size:25px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv9 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+
+  .ctv9 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv9 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv9 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv9 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv9 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv9 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv9 h2{font-size:19px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv9 h3{font-size:14.5px; font-weight:700; color:var(--navy-light); margin:18px 0 8px;}
+  .ctv9 h3:first-of-type{margin-top:6px;}
+  .ctv9 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv9 p.italic-note{font-style:italic; font-size:13px;}
+  .ctv9 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:6px;}
+  .ctv9 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv9 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv9 .back-top{display:inline-block; margin-top:6px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv9 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv9 .map-box{
+    width:100%;
+    height:420px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    margin:14px 0 18px;
+  }
+  .ctv9 .map-box img{width:100%; height:100%; object-fit:contain; display:block;}
+  @media (max-width:640px){
+    .ctv9 .map-box{height:260px;}
+  }
+
+  .ctv9 table.doc-table{width:100%; border-collapse:collapse; margin:0 0 14px; font-size:13px;}
+  .ctv9 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv9 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv9 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv9 table.doc-table td.key{font-weight:600; color:var(--navy); white-space:nowrap;}
+
+  .ctv9 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:14px 16px; margin:14px 0;}
+  .ctv9 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+</style>
+
+<div class="ctv9">
+
+  <header class="hero" id="ctv9-top">
+    <p class="kicker">Модуль 2 · Інфраструктура ринку та географія</p>
+    <h1>Як сформувати географічні знання</h1>
+    <div class="lead">
+      <p>Досвідчений логіст не гортає карту щоразу, коли чує назву міста, — він одразу приблизно розуміє, де це, який напрямок, і скільки днів займе доїзд. Це не вроджена здатність, а результат системного запам'ятовування, яке можна свідомо напрацювати за кілька тижнів.</p>
+      <p>Мета цього довідника — не пояснити, як читати карту (це механіка), а дати план і методики, як побудувати внутрішню карту в голові: які регіони приблизно де знаходяться, у якому порядку їх вчити і як перевіряти себе.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv9-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv9-indexGrid">
+      <a data-target="ctv9-principle">Головний принцип навчання</a>
+      <a data-target="ctv9-germany">Німеччина: квадрати</a>
+      <a data-target="ctv9-poland">Польща: воєводства</a>
+      <a data-target="ctv9-universal">Універсальні методики</a>
+    </div>
+  </nav>
+
+  <section id="ctv9-principle">
+    <h2>Головний принцип навчання</h2>
+    <ul class="doc-list">
+      <li>Вчити не всю країну одразу, а рухатися від найчастіше використовуваних напрямків до рідкісних.</li>
+      <li>Спиратися на великі відомі міста (хаби) як «якорі», а дрібні міста прив'язувати до них подумки.</li>
+      <li>Постійно себе перевіряти — активне пригадування працює краще, ніж просто дивитися на карту.</li>
+      <li>Повторювати з інтервалами: переглянути ще раз за 1 день, потім за 3 дні, потім за тиждень.</li>
+    </ul>
+    <a class="back-top" data-target="ctv9-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv9-germany">
+    <h2>Німеччина — як запам'ятати розташування квадратів</h2>
+    <p>Оскільки квадрати Німеччини — це умовна сітка, а не адміністративний поділ, запам'ятовувати варто не «код заради коду», а прив'язку відомих хабових міст до приблизної частини країни (північ/південь/схід/захід/центр). Сам код квадрата запам'ятається природно, коли ви вже розумієте, в якій частині країни лежить місто.</p>
+
+    <div class="map-box">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ffcc15c6c65.03399509_%D0%BA%D0%B0%D1%80%D1%82%D0%B0.jpg" alt="Карта квадратів Німеччини" loading="lazy">
+    </div>
+
+    <h3>Крок 1 — вивчити «опорні» міста по сторонах світу</h3>
+    <p>Розбийте Німеччину подумки на 5 великих зон і вивчіть по 2–3 найвідоміші логістичні хаби в кожній:</p>
+    <table class="doc-table">
+      <thead><tr><th>Зона</th><th>Опорні міста-хаби</th></tr></thead>
+      <tbody>
+        <tr><td class="key">Північ</td><td>Гамбург (найбільший порт), Бремен</td></tr>
+        <tr><td class="key">Південь</td><td>Мюнхен, Штутгарт</td></tr>
+        <tr><td class="key">Захід</td><td>Кельн, Дюссельдорф, Дуйсбург (великий вантажний хаб)</td></tr>
+        <tr><td class="key">Схід</td><td>Берлін, Дрезден, Лейпциг</td></tr>
+        <tr><td class="key">Центр</td><td>Франкфурт-на-Майні (головний логістичний і фінансовий хаб країни), Ганновер</td></tr>
+      </tbody>
+    </table>
+    <p class="italic-note">Ці міста — «якорі». Коли зустрічаєте нове невідоме місто, перше запитання собі: «На яке з опорних міст воно найбільше схоже за розташуванням — ближче до якої зони?»</p>
+
+    <h3>Крок 2 — вчити по своїх реальних маршрутах</h3>
+    <ul class="doc-list">
+      <li>Не намагайтеся вивчити всю сітку одразу — почніть із міст, які вже зустрічалися у ваших заявках за останній місяць.</li>
+      <li>Після кожного реального рейсу відмічайте на паперовій чи електронній карті пункт завантаження й розвантаження — так формується особиста «карта частоти».</li>
+      <li>За 2–3 тижні роботи ви природно запам'ятаєте 20–30 найчастіших міст без спеціального заучування.</li>
+    </ul>
+
+    <h3>Крок 3 — самоперевірка</h3>
+    <ul class="doc-list">
+      <li>Раз на кілька днів беріть 5 випадкових міст Німеччини (з попередніх заявок) і намагайтеся пригадати, у якій зоні країни вони знаходяться — без підглядання.</li>
+      <li>Перевіряйте себе за картою лише після того, як дали відповідь подумки — так спрацьовує ефект активного пригадування.</li>
+    </ul>
+    <a class="back-top" data-target="ctv9-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv9-poland">
+    <h2>Польща — як запам'ятати воєводства</h2>
+    <p>Оскільки в Польщі орієнтуються по 16 воєводствах, а не по абстрактній сітці, тут запам'ятовування будується інакше — через логічне групування за географією та частотою використання в реальних маршрутах.</p>
+
+    <div class="map-box">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ffcb8940fb8.03041707_%D0%BD%D1%96%D0%BC%D0%B5%D1%87%D1%87%D0%B8%D0%BD%D0%B0.jpg" alt="Карта воєводств Польщі" loading="lazy">
+    </div>
+
+    <h3>Крок 1 — почати з прикордонних воєводств</h3>
+    <p>Це природний пріоритет: більшість вантажів з України заходять у Польщу саме через ці регіони, тож їх варто вивчити першими:</p>
+    <table class="doc-table">
+      <thead><tr><th>Воєводство</th><th>Чому важливе</th></tr></thead>
+      <tbody>
+        <tr><td class="key">Підкарпатське (центр — Жешув)</td><td>Межує з Україною, основний в'їзний коридор для вантажів із заходу України</td></tr>
+        <tr><td class="key">Люблінське (центр — Люблін)</td><td>Межує з Україною, часто перший пункт розмитнення чи перевантаження</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Крок 2 — додати «друге кільце» — сусідні воєводства</h3>
+    <p>Після прикордонних вивчіть ті, що межують із ними і часто зустрічаються як наступні точки маршруту:</p>
+    <ul class="doc-list">
+      <li>Мазовецьке (Варшава) — головний хаб країни, більшість маршрутів так чи інакше проходять через нього або поруч.</li>
+      <li>Малопольське (Краків) — логічне продовження маршруту від Підкарпатського воєводства.</li>
+      <li>Свентокшиське (Кельце) та Куявсько-Поморське (Бидгощ/Торунь) — проміжні регіони на шляху далі на захід.</li>
+    </ul>
+
+    <h3>Крок 3 — західні та північні воєводства (за потреби)</h3>
+    <p>Вивчайте в останню чергу, коли з'являються реальні маршрути в ці регіони: Великопольське (Познань), Нижньосілезьке (Вроцлав), Сілезьке (Катовіце), Поморське (Гданськ), Західнопоморське (Щецін), Любуське, Лодзинське, Опольське, Вармінсько-Мазурське, Підляське.</p>
+
+    <h3>Мнемонічний прийом — «намалюй компас»</h3>
+    <p>Уявіть Польщу як умовний компас і групуйте воєводства не за формальним списком, а за стороною світу відносно Варшави (центр): південний схід — Підкарпатське й Малопольське; схід — Люблінське й Підляське; північ — Поморське й Вармінсько-Мазурське; захід — Любуське й Великопольське; південний захід — Нижньосілезьке й Опольське. Такий просторовий образ запам'ятовується значно краще за сухий перелік назв.</p>
+    <a class="back-top" data-target="ctv9-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv9-universal" style="border-bottom:none;">
+    <h2>Універсальні методики запам'ятовування (для обох країн)</h2>
+
+    <h3>Активне пригадування замість пасивного читання</h3>
+    <p>Найпоширеніша помилка новачка — знову і знову передивлятися карту, сподіваючись, що вона «запам'ятається сама». Натомість ефективніше: закрити карту, спробувати назвати самому, де знаходиться місто/регіон, і лише потім звірити відповідь.</p>
+
+    <h3>Інтервальне повторення</h3>
+    <table class="doc-table">
+      <thead><tr><th>Коли повторювати</th><th>Що робити</th></tr></thead>
+      <tbody>
+        <tr><td class="key">Через 1 день</td><td>Швидко пригадати список опорних міст/воєводств без підказки</td></tr>
+        <tr><td class="key">Через 3 дні</td><td>Повторити ще раз, додати 3–5 нових назв до списку</td></tr>
+        <tr><td class="key">Через 1 тиждень</td><td>Перевірити весь накопичений список, повторити ті, що забулися</td></tr>
+        <tr><td class="key">Далі — щомісяця</td><td>Короткий огляд для закріплення в довгостроковій пам'яті</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Прив'язка до реальних заявок</h3>
+    <p>Найкраще запам'ятовується те, що має практичне застосування. Тому щоразу, коли отримуєте нову заявку, перш ніж дивитися в навігатор, спробуйте самі пригадати, в якому регіоні знаходиться місто завантаження чи розвантаження — і лише потім перевірте себе.</p>
+
+    <h3>Візуальні якорі</h3>
+    <ul class="doc-list">
+      <li>Роздрукуйте карту Німеччини та Польщі й повісьте на робочому місці.</li>
+      <li>Позначайте маркером кожне місто одразу після того, як з ним працювали — з часом карта «оживає» особистим досвідом.</li>
+      <li>Використовуйте різні кольори для різних типів вантажів чи клієнтів — це створює додаткові асоціативні зв'язки.</li>
+    </ul>
+
+    <h3>Картки для самоперевірки (флеш-картки)</h3>
+    <p>Створіть прості картки: з одного боку — назва міста, з іншого — регіон/зона. Перемішуйте й перевіряйте себе у вільну хвилину; це один із найбільш підтверджених методів швидкого й стійкого запам'ятовування географії.</p>
+
+    <div class="callout">
+      <p>💡 Не намагайтеся вивчити все за 1–2 дні — географія засвоюється поступово, через практику і повторення. За місяць регулярної роботи більшість впевнено орієнтуються без карти в 80–90% типових напрямків.</p>
+    </div>
+
+    <a class="back-top" data-target="ctv9-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv9ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv9 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv9ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

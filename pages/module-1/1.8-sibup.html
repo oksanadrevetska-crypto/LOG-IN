@@ -1,0 +1,270 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv8{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #1F3864;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv8, .ctv8 *{box-sizing:border-box;}
+  .ctv8{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:880px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv8 header.hero{
+    padding:32px 0 24px;
+    border-bottom:2px solid var(--navy);
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .ctv8 header.hero .hero-text{flex:1 1 360px; min-width:260px;}
+  .ctv8 header.hero .hero-image{
+    flex:0 0 300px;
+    width:300px;
+    height:220px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ctv8 header.hero .hero-image img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:640px){
+    .ctv8 header.hero .hero-image{width:100%; height:200px; flex:1 1 100%;}
+  }
+
+  .ctv8 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv8 h1{font-size:25px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv8 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 8px;}
+  .ctv8 .dates{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
+  .ctv8 .date-pill{background:var(--table-stripe); border:1px solid var(--line); border-radius:999px; padding:5px 13px; font-size:12px; font-weight:600; color:var(--navy);}
+
+  .ctv8 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv8 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv8 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv8 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv8 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv8 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv8 h2{font-size:18.5px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv8 h3{font-size:14px; font-weight:700; color:var(--peach-ink); margin:20px 0 8px; text-transform:uppercase; letter-spacing:.02em;}
+  .ctv8 h3:first-of-type{margin-top:4px;}
+  .ctv8 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv8 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv8 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv8 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv8 .back-top{display:inline-block; margin-top:6px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv8 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv8 table.sibup{width:100%; border-collapse:collapse; margin:0 0 16px; font-size:12.5px;}
+  .ctv8 table.sibup th{background:var(--navy); color:#fff; text-align:left; padding:8px 10px; font-size:11.5px; font-weight:600;}
+  .ctv8 table.sibup td{padding:8px 10px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv8 table.sibup tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv8 table.sibup td.coin{font-weight:700; color:var(--peach-ink); white-space:nowrap; text-align:right;}
+  .ctv8 table.sibup td.name{font-weight:600; color:var(--navy);}
+
+  .ctv8 .coin-glossary{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:12px 0;}
+  .ctv8 .coin-item{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:10px 13px; text-align:center;}
+  .ctv8 .coin-item .val{font-size:15px; font-weight:700; color:var(--peach-ink);}
+  .ctv8 .coin-item .lbl{font-size:11px; color:var(--ink-soft); margin-top:2px;}
+
+  .ctv8 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:14px 16px; margin:12px 0;}
+  .ctv8 .callout p{margin:0 0 6px; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+  .ctv8 .callout p:last-child{margin-bottom:0;}
+</style>
+
+<div class="ctv8">
+
+  <header class="hero" id="ctv8-top">
+    <div class="hero-text">
+      <p class="kicker">Модуль 1 · Знайомство з компанією</p>
+      <h1>Система нематеріальної мотивації «SibUp»</h1>
+      <div class="lead">
+        <p>Створити простір, де кожен працівник відчуває визнання, натхнення і залученість не лише за результат, а й за ініціативу, знання та внесок у розвиток команди.</p>
+      </div>
+      <div class="dates">
+        <span class="date-pill">Дата впровадження: 01.07.2025</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ff22f326bb2.19988961_%D0%B1%D0%BE%D1%83%D1%81%D0%B8.jpg" alt="SibUp — система нематеріальної мотивації" loading="lazy">
+    </div>
+  </header>
+
+  <nav class="index" id="ctv8-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv8-indexGrid">
+      <a data-target="ctv8-what">Що таке SibUp</a>
+      <a data-target="ctv8-coin">SibCoin</a>
+      <a data-target="ctv8-permanent">Постійні SibUp</a>
+      <a data-target="ctv8-variable">Змінні SibUp за відділами</a>
+      <a data-target="ctv8-exchange">Обмін SibCoin на плюшки</a>
+      <a data-target="ctv8-extra">Додатково</a>
+    </div>
+  </nav>
+
+  <section id="ctv8-what">
+    <h2>Що таке SibUp?</h2>
+    <p>SibUp — це внутрішні ініціативи та активності, за участь у яких працівники отримують віртуальну валюту — SibCoin. Це може бути:</p>
+    <ul class="doc-list">
+      <li>щотижнева активність,</li>
+      <li>щомісячне завдання,</li>
+      <li>разова дія.</li>
+    </ul>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv8-coin">
+    <h2>SibCoin (віртуальна валюта)</h2>
+    <ul class="doc-list">
+      <li><b>Нарахування</b> — в момент виконання завдання ти отримуєш SibCoin віртуально.</li>
+      <li><b>Облік</b> — веде HR-менеджер.</li>
+      <li><b>Доступ</b> — усі працівники мають доступ до таблиці «SibCoin», де видно баланс та активні SibUp поточного місяця.</li>
+    </ul>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv8-permanent">
+    <h2>Постійні SibUp</h2>
+    <p>Діють щомісяця для всіх працівників, незалежно від посади:</p>
+    <table class="sibup">
+      <thead><tr><th>SibUp</th><th>Мета</th><th>Умови</th><th>SibCoin</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Знання — це світло</td><td>Поширення нових знань у команді</td><td>Прочитати бізнес-книгу / лекцію та зробити доповідь для команди</td><td class="coin">250</td></tr>
+        <tr><td class="name">Залучення</td><td>Залучення нового працівника</td><td>Кандидат відпрацював повний випробувальний місяць</td><td class="coin">500</td></tr>
+        <tr><td class="name">Дисципліна</td><td>Дисципліна</td><td>Протягом тижня без запізнень на офісі до 09:30</td><td class="coin">50</td></tr>
+      </tbody>
+    </table>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv8-variable">
+    <h2>Змінні SibUp за відділами</h2>
+    <p>Оголошуються на початку кожного місяця і залежать від посадових функцій. Нижче — приклад для поточного періоду.</p>
+
+    <h3>Відділ логістики</h3>
+    <table class="sibup">
+      <thead><tr><th>SibUp</th><th>Мета</th><th>Умови</th><th>Фіксація</th><th>SibCoin</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Нові вершини</td><td>Збільшення клієнтської бази</td><td>Закриття на угоду клієнта, якого привів самостійно</td><td>в кінці місяця</td><td class="coin">200</td></tr>
+        <tr><td class="name">Елітна угода</td><td>Збільшення чека</td><td>Угода з найбільшою маржею</td><td>в кінці місяця</td><td class="coin">50</td></tr>
+        <tr><td class="name">Норма дня — без компромісів</td><td>Дисципліна, виконання нормативу</td><td>100% виконання щоденних нормативів 5 днів поспіль</td><td>в кінці тижня</td><td class="coin">150</td></tr>
+        <tr><td class="name">Точність і порядок</td><td>Дисципліна ведення CRM</td><td>Усі картки оформлені, не більше 3 зауважень за тиждень</td><td>в кінці тижня</td><td class="coin">50</td></tr>
+        <tr><td class="name">Прорив тижня</td><td>Виконання плану</td><td>Найбільша кількість перевезень за тиждень</td><td>в кінці тижня</td><td class="coin">50</td></tr>
+        <tr><td class="name">Відгук</td><td>Імідж компанії</td><td>Отримати позитивний відгук на Lardi</td><td>точкова</td><td class="coin">25</td></tr>
+        <tr><td class="name">Синергія</td><td>Співпраця</td><td>Закрити угоду від ВП</td><td>точкова</td><td class="coin">300</td></tr>
+        <tr><td class="name">План на максимум</td><td>Збільшення доходу</td><td>Перевиконання плану понад 10%</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Відділ бухгалтерії</h3>
+    <table class="sibup">
+      <thead><tr><th>SibUp</th><th>Мета</th><th>Умови</th><th>Фіксація</th><th>SibCoin</th></tr></thead>
+      <tbody>
+        <tr><td class="name">24/7</td><td>Ефективність</td><td>Опрацювання запитів у позаробочий час, за кожен документ</td><td>в кінці тижня</td><td class="coin">50</td></tr>
+        <tr><td class="name">Об'єми</td><td>Об'єми</td><td>100+ відправлених пакетів документів для замовника</td><td>в кінці місяця</td><td class="coin">50</td></tr>
+        <tr><td class="name">Педант</td><td>Чіткість документації</td><td>Закрито архівний місяць</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+        <tr><td class="name">Прогрес</td><td>Автоматизація</td><td>Запропоновано і впроваджено покращення шаблону/алгоритму оформлення заявок чи рахунків</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+        <tr><td class="name">Акуратист</td><td>Чіткість документації</td><td>0 помилок у вихідних документах протягом місяця</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+        <tr><td class="name">Довідкова</td><td>Сервіс відділу логістики</td><td>Надана допомога з пошуку даних за запитом логіста (договір, інформація по договору), за кожен запит</td><td>в кінці тижня</td><td class="coin">25</td></tr>
+      </tbody>
+    </table>
+
+    <h3>КВЕ</h3>
+    <table class="sibup">
+      <thead><tr><th>SibUp</th><th>Мета</th><th>Умови</th><th>Фіксація</th><th>SibCoin</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Нові вершини</td><td>Збільшення клієнтської бази</td><td>Закриття на угоду клієнта, якого привів самостійно</td><td>в кінці місяця</td><td class="coin">200</td></tr>
+        <tr><td class="name">Лідер</td><td>Командна робота</td><td>Перевиконання плану відділу понад 20%</td><td>в кінці місяця</td><td class="coin">300</td></tr>
+        <tr><td class="name">План на максимум</td><td>Збільшення доходу</td><td>Перевиконання понад 30%</td><td>в кінці місяця</td><td class="coin">150</td></tr>
+        <tr><td class="name">Норма дня на максимум</td><td>Командна робота</td><td>100% виконання щоденних нормативів командою</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+        <tr><td class="name">Тайм</td><td>Тайм-менеджмент</td><td>Задачі за місяць без протермінування</td><td>в кінці місяця</td><td class="coin">150</td></tr>
+        <tr><td class="name">Ідейник</td><td>Розвиток</td><td>Ініціатива, розроблена і впроваджена</td><td>в кінці місяця</td><td class="coin">1000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Керівник бухгалтерії + HR</h3>
+    <table class="sibup">
+      <thead><tr><th>SibUp</th><th>Мета</th><th>Умови</th><th>Фіксація</th><th>SibCoin</th></tr></thead>
+      <tbody>
+        <tr><td class="name">24/7</td><td>Ефективність</td><td>Опрацювання запитів у позаробочий час, за кожен документ</td><td>в кінці тижня</td><td class="coin">50</td></tr>
+        <tr><td class="name">Прогрес</td><td>Автоматизація</td><td>Запропоновано і впроваджено покращення шаблону/алгоритму оформлення заявок чи рахунків</td><td>в кінці місяця</td><td class="coin">100</td></tr>
+        <tr><td class="name">Тайм</td><td>Тайм-менеджмент</td><td>Задачі за місяць без протермінування</td><td>в кінці місяця</td><td class="coin">150</td></tr>
+        <tr><td class="name">Ідейник</td><td>Розвиток</td><td>Ініціатива, розроблена і впроваджена</td><td>в кінці місяця</td><td class="coin">1000</td></tr>
+        <tr><td class="name">СММ</td><td>Маркетинг</td><td>Публікація, яка набрала понад 15 лайків</td><td>в кінці місяця</td><td class="coin">50</td></tr>
+        <tr><td class="name">Офіс</td><td>Вчасність</td><td>Наявність усіх розхідників, без скарг</td><td>в кінці місяця</td><td class="coin">50</td></tr>
+        <tr><td class="name">Бюджет</td><td>Економія</td><td>Зекономлені кошти</td><td>в кінці кварталу</td><td class="coin">500</td></tr>
+      </tbody>
+    </table>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv8-exchange">
+    <h2>Обмін SibCoin на плюшки</h2>
+    <p>Накопичені SibCoin можна обміняти на «плюшки». Обмін здійснюється через HR-менеджера: працівник подає запит із бажаною плюшкою, HR списує відповідну кількість SibCoin і передає іменний сертифікат або надає можливість скористатися бонусом внутрішнього характеру.</p>
+    <div class="callout">
+      <p>Сертифікати/плюшки є особистими — їх може використати лише той, кому вони видані.</p>
+      <p>Плюшки поверненню чи обміну назад на SibCoin не підлягають.</p>
+    </div>
+
+    <table class="sibup">
+      <thead><tr><th>SibCoin</th><th>Плюшки</th></tr></thead>
+      <tbody>
+        <tr><td class="coin">50</td><td>На годину скоротити робочий день</td></tr>
+        <tr><td class="coin">250</td><td>Вихідний день без пояснень</td></tr>
+        <tr><td class="coin">500</td><td>Докупити 1% до плану · Вітамінний/солодкий бокс/обід · Свій плейлист на офісі на тиждень · Підписка (Netflix, YouTube Premium, Spotify, GPT, Canva Pro) · Подарункова карта (Rozetka, EVA, книгарня тощо)</td></tr>
+        <tr><td class="coin">750</td><td>Докупити 1,5% до плану (еквівалент до 1000 грн до кроку)</td></tr>
+        <tr><td class="coin">1000</td><td>Докупити 2% до плану · Сертифікат на спа-процедуру · Офлайн-майстер-клас · Сеанс з психологом · Вечір настільних ігор з командою + піца · Оплата спортзалу</td></tr>
+        <tr><td class="coin">2000</td><td>Докупити 3% до плану · Профільне навчання · Продовжити «життя» клієнта на 1 міс · Бюджет на активність для команди поза бюджетом компанії · Річна підписка (Netflix / YouTube Premium / Spotify) · Сертифікат на вечерю (2 персони)</td></tr>
+        <tr><td class="coin">3000</td><td>Бюджет на вікенд</td></tr>
+      </tbody>
+    </table>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv8-extra" style="border-bottom:none;">
+    <h2>Додатково</h2>
+    <ul class="doc-list">
+      <li>SibCoin не згорають, мають накопичувальний характер — можна збирати їх для обміну на цінніші бонуси.</li>
+      <li>SibCoin можна дарувати колезі — як прояв визнання та підтримки.</li>
+      <li>Працівники, які повідомили про звільнення (або щодо яких рішення про звільнення прийняла компанія), не можуть використати чи подарувати накопичені, але невикористані SibCoin.</li>
+    </ul>
+    <div class="callout"><p>Є ідея для нового SibUp або пропозиція щодо «плюшки»? Звертайся до HR — тут завжди раді ініціативі!</p></div>
+    <a class="back-top" data-target="ctv8-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv8ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv8 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv8ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

@@ -1,0 +1,307 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv10{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+    --note-bg: #EAF1F8;
+    --note-border: #2E75B6;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv10, .ctv10 *{box-sizing:border-box;}
+  .ctv10{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv10 header.hero{
+    padding:32px 0 24px;
+    border-bottom:2px solid var(--navy);
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .ctv10 header.hero .hero-text{flex:1 1 360px; min-width:260px;}
+  .ctv10 header.hero .hero-image{
+    flex:0 0 300px;
+    width:300px;
+    height:220px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ctv10 header.hero .hero-image img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:640px){
+    .ctv10 header.hero .hero-image{width:100%; height:200px; flex:1 1 100%;}
+  }
+
+  .ctv10 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv10 h1{font-size:26px; font-weight:700; color:var(--navy); margin:0 0 6px;}
+  .ctv10 .subtitle{font-size:14px; color:var(--navy-light); font-weight:600; margin:0 0 14px;}
+  .ctv10 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 8px;}
+
+  .ctv10 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv10 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv10 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr));}
+  .ctv10 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv10 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv10 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv10 h2{font-size:19px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv10 h3{font-size:16px; font-weight:700; color:var(--navy); margin:22px 0 4px; scroll-margin-top:16px;}
+  .ctv10 h3:first-of-type{margin-top:4px;}
+  .ctv10 .term-alt{font-size:12.5px; color:var(--ink-faint); font-style:italic; margin:0 0 8px;}
+  .ctv10 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv10 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv10 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv10 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv10 ol.steps{margin:0 0 10px; padding-left:20px; display:grid; gap:7px;}
+  .ctv10 ol.steps li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv10 ol.steps li::marker{color:var(--peach-ink); font-weight:700;}
+  .ctv10 .back-top{display:inline-block; margin-top:6px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv10 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv10 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:13px 16px; margin:10px 0;}
+  .ctv10 .callout .callout-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--peach-ink); margin:0 0 5px;}
+  .ctv10 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+
+  .ctv10 .note-box{background:var(--note-bg); border:1px solid var(--note-border); border-radius:6px; padding:13px 16px; margin:10px 0;}
+  .ctv10 .note-box .note-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--navy-light); margin:0 0 5px;}
+  .ctv10 .note-box p{margin:0; color:var(--navy); font-weight:500; font-size:13px; text-align:left;}
+
+  .ctv10 .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; margin:12px 0;}
+  .ctv10 table.doc-table{width:100%; min-width:560px; border-collapse:collapse; font-size:12.5px;}
+  .ctv10 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:11.5px; white-space:nowrap;}
+  .ctv10 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv10 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv10 table.doc-table td.key{font-weight:700; color:var(--navy);}
+
+  .ctv10 .case-box{background:#fff; border:1px solid var(--line); border-radius:6px; padding:16px 18px; margin:14px 0;}
+  .ctv10 .case-box .case-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--peach-ink); margin-bottom:8px;}
+</style>
+
+<div class="ctv10">
+
+  <header class="hero" id="ctv10-top">
+    <div class="hero-text">
+      <p class="kicker">Модуль 2 · Інфраструктура ринку та географія</p>
+      <h1>Incoterms 2020</h1>
+      <p class="subtitle">EXW, FCA, CIP, DAP, DDP простими словами</p>
+      <div class="lead">
+        <p>Що це означає для роботи SIBWAY і чому кожен менеджер повинен це знати — розберемо п'ять ключових термінів по порядку, від мінімуму обов'язків продавця до максимуму.</p>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a998184024fa0.29305410_2020.jpg" alt="Incoterms 2020" loading="lazy">
+    </div>
+  </header>
+
+  <nav class="index" id="ctv10-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv10-indexGrid">
+      <a data-target="ctv10-what">Що таке Incoterms</a>
+      <a data-target="ctv10-scale">Логіка шкали E → D</a>
+      <a data-target="ctv10-exw">EXW</a>
+      <a data-target="ctv10-fca">FCA</a>
+      <a data-target="ctv10-cip">CIP</a>
+      <a data-target="ctv10-dap">DAP</a>
+      <a data-target="ctv10-ddp">DDP</a>
+      <a data-target="ctv10-summary">Зведена таблиця</a>
+      <a data-target="ctv10-steps">5 кроків менеджера</a>
+      <a data-target="ctv10-case">Практичний кейс</a>
+    </div>
+  </nav>
+
+  <section id="ctv10-what">
+    <h2>Що таке Incoterms і навіщо вони менеджеру</h2>
+    <p>Incoterms — це міжнародний словник із 11 стандартних умов поставки, які продавець і покупець вписують у свій контракт купівлі-продажу. Термін типу «FCA Гданськ» одразу відповідає на три практичні запитання, не переписуючи їх словами щоразу:</p>
+    <ol class="steps">
+      <li>Хто організовує й оплачує перевезення на кожній ділянці маршруту.</li>
+      <li>У якій точці ризик за вантаж переходить від продавця до покупця.</li>
+      <li>Хто відповідає за митне оформлення — експортне і імпортне.</li>
+    </ol>
+    <div class="note-box">
+      <p><b>Incoterms</b> НЕ визначають, кому належить товар юридично (це питання договору купівлі-продажу і права власності) — тільки хто організовує логістику, хто платить і хто несе ризик у дорозі. Плутати «власність» і «ризик за Incoterms» — типова помилка навіть у досвідчених менеджерів.</p>
+    </div>
+    <p>Для SIBWAY Incoterm у контракті клієнта визначає: хто саме є нашим замовником (продавець чи покупець), який обсяг послуг ми прораховуємо (тільки перевезення чи ще й розмитнення обох сторін).</p>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-scale">
+    <h2>Логіка шкали: від E до D</h2>
+    <p>Усі 11 умов Incoterms об'єднані в 4 групи за першою літерою — шкала від мінімуму обов'язків продавця до максимуму. П'ять термінів цього уроку покривають усю шкалу:</p>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Група</th><th>Логіка</th><th>Термін у цьому уроці</th></tr></thead>
+        <tbody>
+          <tr><td class="key">E — Departure</td><td>Продавець просто надає товар на своїй території, все інше — на покупцеві</td><td>EXW</td></tr>
+          <tr><td class="key">F — Main carriage unpaid</td><td>Продавець передає товар перевізнику й робить експортне оформлення, але не платить за основне перевезення</td><td>FCA</td></tr>
+          <tr><td class="key">C — Main carriage paid</td><td>Продавець платить за перевезення до пункту призначення, але ризик передає раніше</td><td>CIP</td></tr>
+          <tr><td class="key">D — Arrival</td><td>Продавець відповідає аж до пункту призначення, включно з ризиком у дорозі</td><td>DAP, DDP</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-exw">
+    <h3>EXW — Ex Works</h3>
+    <p class="term-alt">Франко-завод</p>
+    <p>Продавець робить товар доступним на своїй території (завод, склад) — і на цьому його обов'язки закінчуються. Усе інше: завантаження, перевезення, експортне й імпортне митне оформлення, доставку — організовує покупець.</p>
+    <ul class="doc-list">
+      <li>Ризик переходить одразу на території продавця, ще ДО завантаження на транспорт.</li>
+      <li>Мінімум обов'язків продавця з усієї шкали Incoterms.</li>
+    </ul>
+    <div class="callout">
+      <p class="callout-label">Для SIBWAY</p>
+      <p>Найчастіше наш клієнт (замовник) тут — покупець. Ми організовуємо все з нуля, включно з експортним оформленням у чужій країні — це довше й складніше, бо продавець юридично не зобов'язаний нам у цьому допомагати.</p>
+    </div>
+    <div class="note-box">
+      <p class="note-label" style="color:var(--navy-light)">Нюанс</p>
+      <p>Продавець НЕ зобов'язаний вантажити товар на машину за умовами EXW, хоча на практиці часто допомагає. Це варто уточнити заздалегідь у клієнта — якщо продавець відмовиться, завантаження стає проблемою водія на місці.</p>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-fca">
+    <h3>FCA — Free Carrier</h3>
+    <p class="term-alt">Франко-перевізник</p>
+    <p>Продавець доставляє товар до вказаного місця (свій склад або термінал) і передає перевізнику, обов'язково самостійно виконавши ЕКСПОРТНЕ митне оформлення.</p>
+    <ul class="doc-list">
+      <li>Ризик переходить у момент передачі товару перевізнику.</li>
+      <li>Найпопулярніший термін саме для автомобільних перевезень у Європі — Міжнародна торгова палата (ICC) рекомендує FCA замість EXW чи FOB там, де це можливо.</li>
+    </ul>
+    <div class="callout">
+      <p class="callout-label">Для SIBWAY</p>
+      <p>Простіше за EXW: продавець сам робить експортне оформлення, нам не потрібно цим перейматися. Ми організовуємо перевезення від точки передачі товару перевізнику.</p>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-cip">
+    <h3>CIP — Carriage and Insurance Paid To</h3>
+    <p class="term-alt">Перевезення й страхування оплачені до</p>
+    <p>Продавець оплачує перевезення ДО вказаного пункту призначення і зобов'язаний застрахувати вантаж на максимальне покриття. Але ризик переходить на покупця вже в момент передачі товару ПЕРШОМУ перевізнику — не в пункті призначення.</p>
+    <ul class="doc-list">
+      <li>Продавець виконує експортне оформлення, покупець — імпортне.</li>
+    </ul>
+    <div class="note-box">
+      <p class="note-label" style="color:var(--navy-light)">Найчастіша плутанина з цим терміном</p>
+      <p>Клієнти часто думають: «раз продавець платить за доставку, він і відповідає за вантаж усю дорогу». Це не так — ризик уже на покупцеві з моменту передачі першому перевізнику, навіть якщо оплата й страхування — на продавцеві до самого кінця маршруту.</p>
+    </div>
+    <div class="callout">
+      <p class="callout-label">Для SIBWAY</p>
+      <p>Якщо клієнт-продавець — ми оплачуємо весь маршрут і забезпечуємо страхування вантажу, хоча юридичний ризик уже на покупцеві. Якщо в дорозі щось трапляється, претензію за пошкодження оформляє покупець (за документами він постраждала сторона), хоча організовували й платили ми через продавця.</p>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-dap">
+    <h3>DAP — Delivered At Place</h3>
+    <p class="term-alt">Постачання в місці призначення</p>
+    <p>Продавець організовує й оплачує все перевезення до вказаного місця призначення — товар готовий до розвантаження, але ще НЕ розвантажений.</p>
+    <ul class="doc-list">
+      <li>Ризик переходить у пункті призначення, у момент готовності до розвантаження.</li>
+      <li>Продавець виконує експортне оформлення; імпортне мито, ПДВ і розмитнення — обов'язок покупця.</li>
+    </ul>
+    <div class="callout">
+      <p class="callout-label">Для SIBWAY</p>
+      <p>Якщо клієнт-продавець — ми відповідаємо за весь маршрут до дверей покупця, окрім імпортного розмитнення: це вже задача покупця, або ж домовляємось про брокерські послуги окремим пунктом.</p>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-ddp">
+    <h3>DDP — Delivered Duty Paid</h3>
+    <p class="term-alt">Постачання зі сплатою мита</p>
+    <p>Максимум обов'язків продавця з усієї шкали: доставка до дверей покупця, включно з ІМПОРТНИМ митним оформленням і сплатою мита та ПДВ у країні покупця.</p>
+    <ul class="doc-list">
+      <li>Ризик переходить тільки в момент готовності до розвантаження в кінцевій точці.</li>
+      <li>Практично єдиний термін, де продавець (і SIBWAY від його імені) відповідає за все — від заводу до дверей покупця, включно з чужою країною імпорту.</li>
+    </ul>
+    <div class="note-box">
+      <p class="note-label" style="color:var(--navy-light)">Операційний ризик</p>
+      <p>Найскладніший термін для SIBWAY: потрібно знати імпортні правила країни покупця, а деякі країни вимагають, щоб розмитнення оформлював саме місцевий резидент або власник місцевого VAT-номера. Оформити DDP «як завжди» не завжди юридично можливо — обов'язково уточнювати з митним брокером ще на етапі прорахунку, а не після підтвердження заявки.</p>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-summary">
+    <h2>Зведена таблиця для швидкої звірки</h2>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Термін</th><th>Хто оплачує перевезення</th><th>Де переходить ризик</th><th>Експортне оформлення</th><th>Імпортне оформлення</th></tr></thead>
+        <tbody>
+          <tr><td class="key">EXW</td><td>Покупець (усе)</td><td>На території продавця, до завантаження</td><td>Покупець</td><td>Покупець</td></tr>
+          <tr><td class="key">FCA</td><td>Покупець (з моменту передачі)</td><td>Момент передачі перевізнику</td><td>Продавець</td><td>Покупець</td></tr>
+          <tr><td class="key">CIP</td><td>Продавець (до пункту призначення)</td><td>Момент передачі першому перевізнику</td><td>Продавець</td><td>Покупець</td></tr>
+          <tr><td class="key">DAP</td><td>Продавець (усе)</td><td>Пункт призначення, до розвантаження</td><td>Продавець</td><td>Покупець</td></tr>
+          <tr><td class="key">DDP</td><td>Продавець (усе)</td><td>Пункт призначення, до розвантаження</td><td>Продавець</td><td>Продавець</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-steps">
+    <h2>Що робити менеджеру далі — 5 кроків</h2>
+    <ol class="steps">
+      <li>З'ясувати Incoterm у клієнта одразу на етапі виявлення потреб — не залишати «на потім».</li>
+      <li>Визначити, хто саме є замовником SIBWAY у цій угоді — продавець чи покупець, за таблицею вище.</li>
+      <li>Визначити обсяг послуг для прорахунку: тільки перевезення, чи ще й розмитнення однієї або обох сторін, страхування.</li>
+      <li>Уточнити точне місце переходу ризику і хто відповідає за документи на кожному відрізку — це знадобиться, якщо виникне претензія.</li>
+      <li>Внести правильні умови (хто за що відповідає) явно в заявку і за потреби — в договір, а не покладатися на «зрозуміло само собою».</li>
+    </ol>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv10-case" style="border-bottom:none;">
+    <h2>Практичний кейс</h2>
+    <div class="case-box">
+      <div class="case-label">Ситуація</div>
+      <p>Клієнт — виробник меблів у Польщі — звертається з проханням організувати перевезення партії товару до складу покупця в Одесі. У контракті купівлі-продажу вказано умову CIP Одеса. Клієнт просить прорахувати «просто перевезення» і уточнює, що не хоче розбиратися зі страхуванням.</p>
+    </div>
+    <p><b>Завдання — дай собі відповідь перед тим, як звірити з куратором:</b></p>
+    <ol class="steps">
+      <li>Хто в цій угоді юридичний замовник SIBWAY — продавець чи покупець?</li>
+      <li>Які послуги SIBWAY зобов'язана врахувати в пропозиції, зважаючи на умову CIP, навіть якщо клієнт про них не згадав?</li>
+      <li>Якщо вантаж пошкодиться в дорозі — хто за документами є постраждалою стороною і подаватиме претензію?</li>
+    </ol>
+    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv10ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv10 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv10ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

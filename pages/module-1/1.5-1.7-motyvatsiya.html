@@ -1,0 +1,295 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv7{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv7, .ctv7 *{box-sizing:border-box;}
+  .ctv7{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:840px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv7 header.hero{
+    padding:32px 0 24px;
+    border-bottom:2px solid var(--navy);
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .ctv7 header.hero .hero-text{flex:1 1 360px; min-width:260px;}
+  .ctv7 header.hero .hero-image{
+    flex:0 0 300px;
+    width:300px;
+    height:220px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ctv7 header.hero .hero-image img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:640px){
+    .ctv7 header.hero .hero-image{width:100%; height:200px; flex:1 1 100%;}
+  }
+  .ctv7 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv7 h1{font-size:25px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv7 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0;}
+
+  .ctv7 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv7 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv7 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv7 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv7 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv7 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv7 h2{font-size:18.5px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv7 h3{font-size:14.5px; font-weight:700; color:var(--navy-light); margin:16px 0 8px;}
+  .ctv7 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv7 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv7 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv7 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv7 .back-top{display:inline-block; margin-top:6px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv7 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv7 .glossary{display:grid; gap:10px; margin:12px 0;}
+  .ctv7 .glossary .item{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:11px 15px;}
+  .ctv7 .glossary .item b{color:var(--navy); font-size:13.5px; display:block; margin-bottom:2px;}
+  .ctv7 .glossary .item span{font-size:13px; color:var(--ink-soft);}
+
+  .ctv7 .status-row{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0;}
+  .ctv7 .status-pill{background:var(--table-stripe); border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600; color:var(--navy);}
+
+  .ctv7 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:14px 16px; margin:12px 0;}
+  .ctv7 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+
+  .ctv7 .example-box{background:#fff; border:1px solid var(--line); border-radius:6px; padding:16px 18px; margin:14px 0;}
+  .ctv7 .example-box .example-title{font-size:12px; font-weight:700; color:var(--peach-ink); text-transform:uppercase; letter-spacing:.03em; margin-bottom:10px;}
+
+  .ctv7 table.calc{width:100%; border-collapse:collapse; margin:12px 0; font-size:13px;}
+  .ctv7 table.calc th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv7 table.calc td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft);}
+  .ctv7 table.calc tr:nth-child(even) td{background:var(--table-stripe);}
+
+  .ctv7 .tier-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:12px 0;}
+  .ctv7 .tier{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:12px 14px; text-align:center;}
+  .ctv7 .tier .pct{font-size:16px; font-weight:700; color:var(--navy);}
+  .ctv7 .tier .lbl{font-size:11.5px; color:var(--ink-soft); margin-top:2px;}
+</style>
+
+<div class="ctv7">
+
+  <header class="hero" id="ctv7-top">
+    <div class="hero-text">
+      <p class="kicker">Модуль 1 · Знайомство з компанією</p>
+      <h1>Система обліку та мотивації менеджера</h1>
+      <div class="lead">
+        <p>Як формується заробітна плата, як рахуються бонуси й на що впливає виконання нормативів — розберемо покроково, від внесення даних по угоді до фінальної виплати.</p>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9fed84444766.06767482_%D0%97%D0%9F.jpg" alt="Система обліку та мотивації" loading="lazy">
+    </div>
+  </header>
+
+  <nav class="index" id="ctv7-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv7-indexGrid">
+      <a data-target="ctv7-input">Внесення даних по угодах</a>
+      <a data-target="ctv7-statuses">Статуси угод</a>
+      <a data-target="ctv7-glossary">Умовні позначки</a>
+      <a data-target="ctv7-responsibility">Відповідальність і звірка</a>
+      <a data-target="ctv7-payout">Нарахування ЗП і бонусів</a>
+      <a data-target="ctv7-vacation">Бонуси на період відпустки</a>
+      <a data-target="ctv7-premium">Система преміювання</a>
+      <a data-target="ctv7-kpi">Ставка за KPI</a>
+      <a data-target="ctv7-motivation">Загальна система мотивації</a>
+    </div>
+  </nav>
+
+  <section id="ctv7-input">
+    <h2>Внесення даних по угодах</h2>
+    <p>У день укладання угоди менеджер заповнює такі поля:</p>
+    <ul class="doc-list">
+      <li>Дата завантаження — дата фактичного завантаження, вказана в заявці</li>
+      <li>Маршрут — місце завантаження та місце доставки</li>
+      <li>Номери — державний номерний знак транспортного засобу</li>
+      <li>МК / Клієнт — менеджер клієнта та назва клієнта</li>
+      <li>МП / Перевізник — менеджер перевізника та назва перевізника</li>
+    </ul>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-statuses">
+    <h2>Статуси угод</h2>
+    <p>Кожна угода проходить через один із чотирьох статусів:</p>
+    <div class="status-row">
+      <span class="status-pill">В роботі</span>
+      <span class="status-pill">Завершена</span>
+      <span class="status-pill">Оплата</span>
+      <span class="status-pill">Втрачена</span>
+    </div>
+    <ul class="doc-list">
+      <li><b>В роботі</b> — встановлюється відразу після початку перевезення, змін не потребує до завершення угоди.</li>
+      <li><b>Завершена</b> — менеджер встановлює, коли перевезення виконано, і вносить суму маржі за умовним курсом; при звірці місяця бухгалтер вносить фактичні значення й коригує суму.</li>
+      <li><b>Оплата</b> — встановлюється після отримання інформації про оплату від клієнта.</li>
+      <li><b>Втрачена</b> — угода скасована вже після створення заявок для клієнта/перевізника.</li>
+    </ul>
+    <div class="callout"><p>Усі інші поля в таблиці заборонені для редагування.</p></div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-glossary">
+    <h2>Умовні позначки</h2>
+    <p>У робочій таблиці зустрічаються такі показники:</p>
+    <div class="glossary">
+      <div class="item"><b>Ставка</b><span>Розмір ставки для поточного місяця.</span></div>
+      <div class="item"><b>Особистий факт виконання плану на місяць</b><span>Загальна сума маржі по угодах зі статусом "завершена" або "оплата", дата завантаження яких відповідає поточному місяцю.</span></div>
+      <div class="item"><b>Особистий план на місяць</b><span>План продажу в гривневому еквіваленті, встановлений для менеджера.</span></div>
+      <div class="item"><b>% виконання</b><span>Відсоток виконання плану продажу.</span></div>
+      <div class="item"><b>ЗП нарахована</b><span>Загальна сума, нарахована менеджеру за перевезення поточного місяця.</span></div>
+      <div class="item"><b>ЗП до оплати (попередній місяць)</b><span>Фактична сума бонусів, які будуть виплачені в поточному місяці — за перевезення минулого місяця зі статусом "Оплата"/"Завершене".</span></div>
+      <div class="item"><b>Аванс / ЗП (блок "Виплати")</b><span>Суми, які працівник фактично отримав у поточному місяці.</span></div>
+    </div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-responsibility">
+    <h2>Відповідальність і фінальна звірка</h2>
+    <p>Менеджер несе відповідальність за коректність внесення даних у своїх полях — важливо стежити за правильністю дати, статусу угод та інших параметрів, щоб уникнути помилок в обрахунках. Остаточна звірка нарахованої заробітної плати та суми до виплати залишається за бухгалтером.</p>
+    <div class="callout"><p>Виключення: якщо клієнт оплачує перевезення у валюті, угода зі статусом "завершена" не може отримати статус "оплата" до фактичної оплати — потрібно дочекатися курсу валюти для визначення розміру маржі.</p></div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-payout">
+    <h2>Нарахування та виплата ЗП і бонусів</h2>
+    <h3>Бонусна частина</h3>
+    <ul class="doc-list">
+      <li>Визначається у поточному місяці залежно від % виконання плану продажів.</li>
+      <li>Особистий відсоток бонусу для кожного менеджера визначається відповідно до затвердженої системи мотивації.</li>
+    </ul>
+    <h3>Виплата заробітної плати</h3>
+    <ul class="doc-list">
+      <li>ЗП складається з фіксованої ставки за поточний місяць та бонусної частини за попередній місяць.</li>
+      <li>Виплата відбувається один раз на місяць, в кінці місяця.</li>
+    </ul>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-vacation">
+    <h2>Бонуси на період відпустки</h2>
+    <p>На період відпустки менеджер передає клієнта на ведення колезі. Маржа з перевезення зараховується для виконання плану як менеджеру, якому передано клієнта, так і менеджеру, який надав авто для перевезення. Бонус по клієнту ділиться порівну між відповідальним менеджером і тим, кому клієнта передали; бонус по перевізнику нараховується менеджеру, який надав авто.</p>
+
+    <div class="example-box">
+      <div class="example-title">Приклад</div>
+      <p><b>Менеджер А</b> тимчасово йде у відпустку та передає клієнта <b>Менеджеру В</b>. Менеджер В укладає угоду з цим клієнтом; <b>Менеджер С</b> забезпечує транспорт. Маржинальність угоди — умовна сума X. Усі троє виконали план на 100%.</p>
+      <table class="calc">
+        <thead><tr><th>Зарахування до плану</th><th>Хто отримує</th></tr></thead>
+        <tbody>
+          <tr><td>Повна сума X</td><td>Менеджер В (відповідальний за угоду в цей період)</td></tr>
+          <tr><td>Повна сума X</td><td>Менеджер С (за надане авто)</td></tr>
+        </tbody>
+      </table>
+      <table class="calc">
+        <thead><tr><th>Розподіл бонусу</th><th>Роль</th></tr></thead>
+        <tbody>
+          <tr><td>7,5%</td><td>Менеджер А (відповідальний за клієнта, у відпустці)</td></tr>
+          <tr><td>7,5%</td><td>Менеджер В (тимчасово супроводжував, уклав угоду)</td></tr>
+          <tr><td>15%</td><td>Менеджер С (надав авто/перевізника)</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px; font-size:12.5px;">Якщо хтось із менеджерів виконав план не на 100% — його частка бонусу пропорційно коригується.</p>
+    </div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-premium">
+    <h2>Система преміювання</h2>
+    <p>Умови отримання премії:</p>
+    <div class="tier-grid">
+      <div class="tier"><div class="pct">100%</div><div class="lbl">Виконання загального плану компанії + особистого плану</div></div>
+      <div class="tier"><div class="pct">+25%</div><div class="lbl">до ставки при перевиконанні особистого плану на 30%+</div></div>
+      <div class="tier"><div class="pct">+35%</div><div class="lbl">до ставки при перевиконанні особистого плану на 50%+</div></div>
+    </div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-kpi">
+    <h2>Розрахунок ставки залежно від виконання KPI</h2>
+    <p>Ставка працівника формується залежно від рівня виконання ключових показників ефективності (KPI): виставлення на платформі, кількість вихідних дзвінків, кількість опрацьованих запитів. Кожен показник має нормативне значення та власну частку в загальній сумі ставки.</p>
+    <h3>Принцип нарахування</h3>
+    <ul class="doc-list">
+      <li>Кожен KPI має визначену частку у ставці.</li>
+      <li>Виконання менше 30% від нормативу — виплата за цим показником не нараховується.</li>
+      <li>Виконання від 30% до 100% — нарахування пропорційне рівню виконання.</li>
+      <li>Виконання 100% і більше — відповідна частка ставки виплачується в повному обсязі.</li>
+    </ul>
+    <div class="callout"><p>Формула: Виплата за показником = частка ставки × % виконання KPI (за умови виконання ≥ 30%)</p></div>
+
+    <div class="example-box">
+      <div class="example-title">Приклад (умовні дані для ілюстрації формули)</div>
+      <table class="calc">
+        <thead><tr><th>Показник</th><th>Частка ставки</th><th>Виконання</th><th>Виплата</th></tr></thead>
+        <tbody>
+          <tr><td>Дзвінки</td><td>30%</td><td>80%</td><td>30% × 80% = 24% ставки</td></tr>
+          <tr><td>Запити</td><td>40%</td><td>90%</td><td>40% × 90% = 36% ставки</td></tr>
+          <tr><td>Платформа</td><td>30%</td><td>100%</td><td>30% × 100% = 30% ставки</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:8px; font-size:12.5px;">Разом у цьому прикладі: 24% + 36% + 30% = 90% від повної ставки. Це забезпечує прозорість і прямий зв'язок між результатом роботи та розміром ставки.</p>
+    </div>
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv7-motivation" style="border-bottom:none;">
+    <h2>Загальна система мотивації компанії</h2>
+    <p>Кожен менеджер має особистий план по маржі. Виконання 100% плану — це база; все, що нижче — вважається регресією і зменшує відсоток бонусу.</p>
+    <div class="tier-grid">
+      <div class="tier"><div class="pct">7%</div><div class="lbl">бонус, якщо виконання &lt;60% плану</div></div>
+      <div class="tier"><div class="pct">10%</div><div class="lbl">бонус при виконанні 60% плану</div></div>
+      <div class="tier"><div class="pct">12,5%</div><div class="lbl">бонус при виконанні 80% плану</div></div>
+      <div class="tier"><div class="pct">15%</div><div class="lbl">бонус при виконанні 100% плану (база)</div></div>
+    </div>
+
+    <div class="callout">
+      <p>Твій особистий прогрес і виконання нормативів фіксуються в робочій таблиці — куратор покаже її та поясне детальніше, коли почнеш працювати з реальними угодами.</p>
+    </div>
+
+    <a class="back-top" data-target="ctv7-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv7ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv7 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv7ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

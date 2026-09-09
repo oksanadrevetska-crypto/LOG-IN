@@ -1,0 +1,1044 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv2{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv2, .ctv2 *{box-sizing:border-box;}
+  .ctv2{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.55;
+    max-width:900px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv2 .kicker{
+    color:var(--peach-ink);
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.02em;
+    text-transform:uppercase;
+    margin:0 0 10px;
+  }
+  .ctv2 header.hero{
+    padding:36px 0 24px;
+    border-bottom:2px solid var(--navy);
+  }
+  .ctv2 h1{
+    font-size:30px;
+    line-height:1.12;
+    font-weight:700;
+    color:var(--navy);
+    margin:0 0 12px;
+  }
+  .ctv2 .hero-sub{
+    color:var(--ink-soft);
+    font-size:15px;
+    line-height:1.6;
+    max-width:68ch;
+    margin:0;
+    text-align:justify;
+  }
+  .ctv2 .hero-meta{
+    display:flex;
+    gap:26px;
+    margin-top:22px;
+    flex-wrap:wrap;
+  }
+  .ctv2 .hero-meta div{font-size:12.5px;color:var(--ink-faint);}
+  .ctv2 .hero-meta b{
+    display:block;
+    font-size:19px;
+    color:var(--navy);
+    font-weight:700;
+  }
+
+  .ctv2 nav.index{
+    margin:26px 0 6px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .ctv2 nav.index .index-title{
+    padding:11px 16px;
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--navy);
+    background:var(--table-stripe);
+  }
+  .ctv2 .index-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  }
+  .ctv2 .index-grid a{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    padding:11px 16px;
+    text-decoration:none;
+    color:var(--ink);
+    border-top:1px solid var(--line);
+    border-right:1px solid var(--line);
+    font-size:13.5px;
+    cursor:pointer;
+    transition:background .12s ease, color .12s ease, padding-left .12s ease;
+  }
+  .ctv2 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+  .ctv2 .index-grid a .code{
+    font-size:11px;
+    color:var(--navy-light);
+    font-weight:700;
+  }
+  .ctv2 .index-grid a:hover .code{color:var(--peach-ink);}
+
+  .ctv2 section.card{
+    padding:32px 0;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:16px;
+  }
+  .ctv2 .card-top{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .ctv2 .icon-box{
+    width:100%;
+    height:480px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--navy);
+    overflow:hidden;
+  }
+  .ctv2 .icon-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .ctv2 .dim-label{font-size:8.5px; font-weight:700; fill:var(--peach-ink); font-family:'Montserrat',Arial,sans-serif;}
+  .ctv2 .dim-line{stroke:var(--navy-light); stroke-width:0.9;}
+  @media (max-width:640px){
+    .ctv2 .icon-box{height:320px;}
+  }
+  .ctv2 .code-tag{
+    font-size:12px;
+    font-weight:700;
+    color:var(--peach-ink);
+    letter-spacing:.02em;
+    display:block;
+    margin-bottom:5px;
+  }
+  .ctv2 .card-title h2{
+    font-size:21px;
+    font-weight:700;
+    color:var(--navy);
+    margin:0 0 3px;
+  }
+  .ctv2 .card-title .alt{
+    font-size:13.5px;
+    color:var(--ink-faint);
+    font-style:italic;
+    margin:0;
+  }
+
+  .ctv2 .definition{
+    margin:16px 0 0;
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    text-align:justify;
+  }
+
+  .ctv2 .spec-grid{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  .ctv2 .spec{
+    padding:10px 14px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:var(--table-stripe);
+  }
+  .ctv2 .spec .label{
+    font-size:11px;
+    color:var(--ink-faint);
+    margin-bottom:4px;
+  }
+  .ctv2 .spec .value{
+    font-size:15px;
+    font-weight:700;
+    color:var(--navy);
+  }
+
+  .ctv2 .field-row{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:14px;
+    margin-top:16px;
+    font-size:14px;
+    line-height:1.55;
+  }
+  .ctv2 .field-row .f-label{
+    color:var(--navy-light);
+    font-size:12px;
+    font-weight:600;
+    padding-top:2px;
+  }
+  .ctv2 .field-row .f-value{color:var(--ink-soft); text-align:justify;}
+
+  .ctv2 .features{
+    margin-top:16px;
+    list-style:none;
+    padding:0;
+    display:grid;
+    gap:7px;
+  }
+  .ctv2 .features li{
+    position:relative;
+    padding-left:16px;
+    font-size:13.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    text-align:justify;
+  }
+  .ctv2 .features li::before{
+    content:"";
+    position:absolute;
+    left:0; top:6px;
+    width:6px; height:6px;
+    background:var(--peach-border);
+    border-radius:1px;
+  }
+
+  .ctv2 .back-top{
+    display:inline-block;
+    margin-top:18px;
+    font-size:12px;
+    color:var(--ink-faint);
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+  }
+  .ctv2 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv2 section.summary{padding:38px 0 10px;}
+  .ctv2 section.summary h2{
+    font-size:22px;
+    font-weight:700;
+    color:var(--navy);
+    margin:0 0 4px;
+  }
+  .ctv2 section.summary .hero-sub{margin-bottom:16px;}
+  .ctv2 .table-wrap{
+    overflow-x:auto;
+    border:1px solid var(--line);
+    border-radius:6px;
+  }
+  .ctv2 table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
+    background:#FFFFFF;
+  }
+  .ctv2 thead th{
+    text-align:left;
+    font-size:12px;
+    font-weight:700;
+    color:#FFFFFF;
+    background:var(--navy);
+    padding:11px 14px;
+    white-space:nowrap;
+  }
+  .ctv2 tbody td{
+    padding:11px 14px;
+    font-size:13.5px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-soft);
+    vertical-align:top;
+  }
+  .ctv2 tbody tr:nth-child(even){background:var(--table-stripe);}
+  .ctv2 tbody tr:hover td{background:var(--peach-bg);}
+  .ctv2 tbody td.name{
+    font-weight:700;
+    color:var(--navy);
+    white-space:nowrap;
+    cursor:pointer;
+  }
+  .ctv2 tbody td.name:hover{color:var(--peach-ink);}
+  .ctv2 td.num{white-space:nowrap;}
+
+  @media (max-width:640px){
+    .ctv2 .card-top{flex-direction:column;}
+    .ctv2 .icon-box{width:100%; height:84px;}
+    .ctv2 .field-row{grid-template-columns:1fr;}
+    .ctv2 .field-row .f-label{padding-top:0;}
+  }
+</style>
+<div class="ctv2">
+
+  <header class="hero" id="ctv2-top">
+    <p class="kicker">Довідник · вантажний автотранспорт</p>
+    <h1>Типи вантажного автомобільного транспорту</h1>
+    <p class="hero-sub">Ознайомимось з довідником про типи вантажного автомобільного транспорту: конструкція, габарити, вантажопідйомність та сфера застосування кожного.</p>
+    <div class="hero-meta">
+      <div><b id="ctv2MetaCount">13</b>типів кузовів</div>
+      <div><b>0,8–34 т</b>діапазон вантажопідйомності</div>
+      <div><b>8–120 м³</b>діапазон об'єму кузова</div>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv2-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv2-indexGrid"></div>
+  </nav>
+
+  <main id="ctv2-cards"></main>
+
+  <section class="summary" id="ctv2-summary">
+    <h2>Зведена порівняльна таблиця</h2>
+    <p class="hero-sub">Вага, об'єм і типовий вантаж усіх тринадцяти типів поруч — для швидкого вибору транспорту.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Тип транспорту</th>
+            <th>Вага</th>
+            <th>Об'єм</th>
+            <th>Типовий вантаж</th>
+          </tr>
+        </thead>
+        <tbody id="ctv2-summaryBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+<script>
+(function(){
+const CTV2_TYPES = [
+  {
+    "code": "T-01",
+    "name": "Тент",
+    "alt": "Тентований напівпричіп / Curtain-sider · штора-борт",
+    "icon": "tent",
+    "def": "Напівпричіп із каркасом і брезентовим (тентовим) тентом на бокових стінках, що відкривається збоку для зручного бокового завантаження, та жорсткою підлогою й дахом.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "13,6 м"
+      ],
+      [
+        "Загальна довжина",
+        "до 16,5 м"
+      ],
+      [
+        "Ширина",
+        "2,45–2,48 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "2,4–2,7 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "22–24 т"
+      ],
+      [
+        "Об'єм кузова",
+        "82–95 м³"
+      ]
+    ],
+    "cargo": "Генеральні вантажі, які не потребують захисту від температури: палети, будматеріали, техніка, меблі, промислове обладнання, упаковані товари.",
+    "usage": "Найпоширеніший тип транспорту для міжнародних та внутрішніх перевезень генеральних вантажів у Європі та Україні.",
+    "features": [
+      "Бокове, заднє та верхнє завантаження — зручність при роботі з палетним вантажем і навантажувачем",
+      "Нижча вартість перевезення порівняно зі спецтехнікою",
+      "Не захищає вантаж від температурних перепадів і частково — від вологи"
+    ],
+    "sumWeight": "22–24 т",
+    "sumVolume": "82–95 м³",
+    "sumCargo": "Генеральні палетні вантажі"
+  },
+  {
+    "code": "T-02",
+    "name": "Рефрижератор",
+    "alt": "Реф / Refrigerated truck",
+    "icon": "reefer",
+    "def": "Цільнометалевий теплоізольований кузов, обладнаний автономною холодильною (або опційно обігрівальною) установкою, що підтримує задану температуру протягом усього маршруту незалежно від зовнішніх умов.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "13,6 м (станд.)"
+      ],
+      [
+        "Ширина",
+        "2,45–2,48 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "2,4–2,6 м"
+      ],
+      [
+        "Товщина ізоляції",
+        "45–60 мм"
+      ],
+      [
+        "Вантажопідйомність",
+        "20–22 т"
+      ],
+      [
+        "Об'єм кузова",
+        "75–90 м³"
+      ]
+    ],
+    "cargo": "Швидкопсувні продукти: заморожені (-18…-20°C), охолоджені (0…+4°C), фрукти й овочі, молочна продукція, фармацевтика, квіти.",
+    "usage": "Перевезення продуктів харчування, фармацевтичної продукції та будь-яких товарів із вимогами до температурного режиму.",
+    "features": [
+      "Точне підтримання й контроль температури, часто з реєстратором для звітності клієнту",
+      "Можливе мультитемпературне зонування кузова перегородками",
+      "Вища вартість перевезення через витрати на паливо для холодильної установки"
+    ],
+    "sumWeight": "20–22 т",
+    "sumVolume": "75–90 м³",
+    "sumCargo": "Швидкопсувні / температурні вантажі"
+  },
+  {
+    "code": "T-03",
+    "name": "Цільнометалевий фургон",
+    "alt": "Цільномет / Dry van · Box body",
+    "icon": "dryvan",
+    "def": "Жорсткий цільнометалевий (сталь/алюміній) закритий кузов без тепло- чи холодоізоляції, з дверима ззаду (розпашні або рулонні), рідше — з боковою хвірткою.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "13,6 м"
+      ],
+      [
+        "Ширина",
+        "2,45–2,48 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "2,4–2,7 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "22–24 т"
+      ],
+      [
+        "Об'єм кузова",
+        "85–95 м³"
+      ]
+    ],
+    "cargo": "Товари, що потребують захисту від крадіжки, вологи та пилу, але не потребують контролю температури: побутова техніка, електроніка, будматеріали в упаковці, текстиль, харчові товари тривалого зберігання.",
+    "usage": "Перевезення цінних або чутливих до вологи/пилу товарів там, де тент недостатньо захищає вантаж.",
+    "features": [
+      "Краща безпека вантажу — жорсткі стінки складніше розрізати чи зламати, ніж тент",
+      "Повна герметичність від дощу й пилу",
+      "Завантаження лише через задні (рідше бокові) двері — менш гнучке порівняно з тентом"
+    ],
+    "sumWeight": "22–24 т",
+    "sumVolume": "85–95 м³",
+    "sumCargo": "Вологочутливі, цінні товари"
+  },
+  {
+    "code": "T-04",
+    "name": "Ізотерм",
+    "alt": "Ізотермічний фургон",
+    "icon": "isotherm",
+    "def": "Кузов із теплоізольованими стінками, підлогою та дахом (за конструкцією схожий на рефрижератор), але без активної холодильної/опалювальної установки — лише пасивно вповільнює зміну температури всередині.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "13,6 м або менша"
+      ],
+      [
+        "Ширина",
+        "2,45–2,48 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "2,3–2,6 м"
+      ],
+      [
+        "Товщина ізоляції",
+        "40–50 мм"
+      ],
+      [
+        "Вантажопідйомність",
+        "20–23 т"
+      ],
+      [
+        "Об'єм кузова",
+        "80–90 м³"
+      ]
+    ],
+    "cargo": "Товари, чутливі до різких перепадів температури на короткій та середній дистанції: напої, консерви, деякі будматеріали, продукція в теплу/холодну пору року.",
+    "usage": "Короткі та середні за тривалістю перевезення, коли потрібно лише пом'якшити вплив зовнішньої температури.",
+    "features": [
+      "Дешевший за рефрижератор в експлуатації і за вартістю фрахту — немає витрат на пальне для холодильної установки",
+      "Не підходить для тривалих перевезень або суворих температурних вимог (заморожені продукти, фармацевтика)"
+    ],
+    "sumWeight": "20–23 т",
+    "sumVolume": "80–90 м³",
+    "sumCargo": "Вантажі, чутливі до перепадів t° (коротка/середня дистанція)"
+  },
+  {
+    "code": "T-05",
+    "name": "Автопоїзд на зчепленні",
+    "alt": "Автозчеплення · тягач + причіп",
+    "icon": "roadtrain",
+    "def": "Комбінація тягача з двома незалежними вантажними одиницями: напівпричепом (або кузовом на шасі) та додатковим причепом, з'єднаним через дишель і зчіпний пристрій, а не через сідельно-зчіпний пристрій.",
+    "specs": [
+      [
+        "Загальна довжина",
+        "до 18,75 м"
+      ],
+      [
+        "Вантажних відсіків",
+        "2 незалежні"
+      ],
+      [
+        "Сумарна вантажопідйомність",
+        "25–34 т"
+      ]
+    ],
+    "cargo": "Ті самі категорії вантажу, що й для тентового/цільнометалевого кузова, коли потрібен більший сумарний об'єм чи вага в межах однієї поїздки.",
+    "usage": "Перевезення великих обсягів генеральних вантажів однією поїздкою — Скандинавія, окремі маршрути ЄС, де дозволена така довжина автопоїзда.",
+    "features": [
+      "Дозволяє перевезти більше вантажу за одну поїздку, ніж стандартний напівпричіп",
+      "Складніший у керуванні та маневруванні, має обмеження щодо доріг і країн в'їзду"
+    ],
+    "sumWeight": "25–34 т",
+    "sumVolume": "більше за одинарний тент",
+    "sumCargo": "Великі обсяги генерального вантажу"
+  },
+  {
+    "code": "T-06",
+    "name": "Джамбо",
+    "alt": "Jumbo / Mega trailer",
+    "icon": "jumbo",
+    "def": "Напівпричіп на низькій рамі (знижена висота платформи) з увігнутим шасі над колесами, що дозволяє збільшити внутрішню висоту кузова до максимально дозволеної загальної висоти автопоїзда.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "13,6 м"
+      ],
+      [
+        "Ширина",
+        "2,45–2,48 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "до 3,0 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "22–24 т"
+      ],
+      [
+        "Об'єм кузова",
+        "100–120 м³"
+      ]
+    ],
+    "cargo": "Легкі, але об'ємні вантажі, для яких критичний саме об'єм, а не вага: побутова техніка, меблі, пінопласт та упаковка, текстиль, товари в коробках.",
+    "usage": "Перевезення легких, але об'ємних вантажів, коли стандартного тента не вистачає за кубатурою, хоча ліміт ваги ще не вичерпано.",
+    "features": [
+      "Максимізує використання дозволеного об'єму при легкому вантажі — економія на кількості рейсів",
+      "Вища кабіна завантаження може ускладнювати роботу з деякими типами навантажувальної техніки"
+    ],
+    "sumWeight": "22–24 т",
+    "sumVolume": "100–120 м³",
+    "sumCargo": "Легкі, об'ємні вантажі"
+  },
+  {
+    "code": "T-07",
+    "name": "Контейнеровоз",
+    "alt": "Шасі для ISO-контейнерів",
+    "icon": "container",
+    "def": "Спеціалізований напівпричіп-шасі з фіксаторами (twist locks) для закріплення стандартного ISO-контейнера; сам контейнер є вантажною одиницею й може перевозитися будь-яким видом транспорту без перевантаження вмісту.",
+    "specs": [
+      [
+        "Розмір 20 фут.",
+        "≈6,1 м"
+      ],
+      [
+        "Розмір 40 фут.",
+        "≈12,2 м"
+      ],
+      [
+        "Стандарт ISO",
+        "2,44 × 2,59 м"
+      ],
+      [
+        "High cube",
+        "2,90 м"
+      ],
+      [
+        "Вантажопідйомність 20'",
+        "до 28 т"
+      ],
+      [
+        "Вантажопідйомність 40'",
+        "26–30 т"
+      ]
+    ],
+    "cargo": "Будь-який тип вантажу, вже упакований у контейнер — від генеральних вантажів до рефрижераторних (reefer) чи небезпечних (за наявності маркування).",
+    "usage": "Перевезення вантажів у мультимодальному сполученні (порт → авто → залізниця) без перевантаження самого товару.",
+    "features": [
+      "Вантаж не перевантажується між видами транспорту — знижує ризик пошкодження",
+      "Для завантаження/розвантаження потрібен кран або ричстакер у порту чи на терміналі"
+    ],
+    "sumWeight": "26–30 т",
+    "sumVolume": "33–76 м³ (контейнер)",
+    "sumCargo": "Мультимодальні перевезення"
+  },
+  {
+    "code": "T-08",
+    "name": "Автоцистерна",
+    "alt": "Танкер / Tanker truck",
+    "icon": "tanker",
+    "def": "Металева (сталь, алюміній) герметична цистерна, може бути секціонована на кілька відсіків для одночасного перевезення різних рідин; конструкція залежить від типу вантажу.",
+    "specs": [
+      [
+        "Об'єм цистерни",
+        "20 000–40 000 л"
+      ],
+      [
+        "Відсіків",
+        "2–6"
+      ],
+      [
+        "Вантажопідйомність",
+        "22–28 т"
+      ]
+    ],
+    "cargo": "Рідкі та наливні вантажі: паливо (бензин, дизель), харчові рідини (молоко, олія, вино, сиропи), хімічні речовини та рідкі добрива, стиснуті/зріджені гази.",
+    "usage": "Перевезення пального на АЗС, харчових рідин між виробництвами, хімічної продукції — часто з додатковим дозволом ADR для небезпечних рідин.",
+    "features": [
+      "Потребує спеціальної мийки/дезінфекції цистерни між рейсами з різними продуктами",
+      "Для небезпечних рідин обов'язкові дозвіл ADR, спецпідготовка водія та маркування ТЗ"
+    ],
+    "sumWeight": "22–28 т",
+    "sumVolume": "20 000–40 000 л",
+    "sumCargo": "Рідини, наливні вантажі"
+  },
+  {
+    "code": "T-09",
+    "name": "Автовоз",
+    "alt": "Car carrier",
+    "icon": "carcarrier",
+    "def": "Спеціалізований напівпричіп з гідравлічними рампами й кількома рівнями завантаження, що дозволяє перевозити кілька легкових автомобілів або іншу колісну техніку одночасно, надійно закріплюючи кожен з них.",
+    "specs": [
+      [
+        "Довжина",
+        "13,6–16,5 м"
+      ],
+      [
+        "Рівнів завантаження",
+        "2 (верхній / нижній)"
+      ],
+      [
+        "Місткість",
+        "8–12 авто"
+      ],
+      [
+        "Вантажопідйомність",
+        "до 24–28 т"
+      ]
+    ],
+    "cargo": "Легкові автомобілі, кросовери, невелика спецтехніка, мотоцикли (у комбінованих завантаженнях).",
+    "usage": "Перевезення нових і вживаних автомобілів від виробника/порту до дилерських центрів чи між країнами.",
+    "features": [
+      "Вимагає спеціальних навичок закріплення (кріплення колісних пар, ременів) для запобігання пошкодженню авто",
+      "Найчастіше — маршрутизовані регулярні перевезення (виробник → дилер) великими партіями"
+    ],
+    "sumWeight": "до 24–28 т",
+    "sumVolume": "8–12 авто",
+    "sumCargo": "Транспортні засоби"
+  },
+  {
+    "code": "T-10",
+    "name": "Зерновоз",
+    "alt": "Grain trailer",
+    "icon": "grain",
+    "def": "Кузов кузовного типу з високими бортами та тентовим або жорстким верхом, часто з можливістю саморозвантаження через люки в підлозі (самоскидний/гравітаційний тип) для швидкого зливу зерна.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "12–13,6 м"
+      ],
+      [
+        "Висота бортів",
+        "1,9–2,2 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "28–33 т"
+      ],
+      [
+        "Об'єм кузова",
+        "60–95 м³"
+      ]
+    ],
+    "cargo": "Зернові та олійні культури (пшениця, кукурудза, соняшник, соя), інші сипучі агровантажі (комбікорм, добрива в гранулах).",
+    "usage": "Перевезення врожаю від поля/елеватора до порту або переробного підприємства, типово в сезон збору врожаю.",
+    "features": [
+      "Швидке розвантаження самопливом через нижні люки — без стороннього обладнання",
+      "Потребує чистого й сухого кузова (санітарні вимоги) перед кожним завантаженням"
+    ],
+    "sumWeight": "28–33 т",
+    "sumVolume": "60–95 м³",
+    "sumCargo": "Зернові, сипучі агровантажі"
+  },
+  {
+    "code": "T-11",
+    "name": "Самоскид",
+    "alt": "Dump truck / Tipper",
+    "icon": "dump",
+    "def": "Металевий кузов, що піднімається гідравлічним механізмом під кутом до 45–50°, забезпечуючи самостійне розвантаження вантажу під власною вагою без додаткового обладнання.",
+    "specs": [
+      [
+        "Об'єм кузова",
+        "12–30 м³"
+      ],
+      [
+        "Вантажопідйомність",
+        "10–25 т"
+      ]
+    ],
+    "cargo": "Сипучі будівельні та інертні матеріали: пісок, щебінь, гравій, ґрунт, асфальтна крихта, вугілля.",
+    "usage": "Будівельні майданчики, кар'єри, дорожні роботи — де потрібне швидке завантаження й розвантаження сипучих матеріалів.",
+    "features": [
+      "Найшвидший спосіб розвантаження сипучих матеріалів — без крана чи додаткової техніки",
+      "Не призначений для генеральних, палетних чи чутливих вантажів"
+    ],
+    "sumWeight": "10–25 т",
+    "sumVolume": "12–30 м³",
+    "sumCargo": "Сипучі будматеріали"
+  },
+  {
+    "code": "T-12",
+    "name": "Мікровантажівка",
+    "alt": "Van, клас Sprinter/Transit",
+    "icon": "van",
+    "def": "Суцільнометалевий фургон на базі легкового шасі з боковими та задніми дверима, без причепа.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "3–4,3 м"
+      ],
+      [
+        "Ширина",
+        "≈1,8–2,2 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "1,6–2,1 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "0,8–1,5 т"
+      ],
+      [
+        "Об'єм кузова",
+        "8–17 м³"
+      ]
+    ],
+    "cargo": "Невеликі партії товару, кур'єрські та поштові відправлення, роздрібна доставка, електроніка, документи, запчастини.",
+    "usage": "Міські та останньомильні перевезення, доставка інтернет-замовлень, сервісні виїзди, забір/доставка невеликих партій.",
+    "features": [
+      "Маневреність і доступ у центри міст, куди заборонено в'їзд великогабаритному транспорту",
+      "Обмежена вантажопідйомність і об'єм — не підходить для оптових партій"
+    ],
+    "sumWeight": "0,8–1,5 т",
+    "sumVolume": "8–17 м³",
+    "sumCargo": "Кур'єрська/міська доставка"
+  },
+  {
+    "code": "T-13",
+    "name": "Малотоннажник",
+    "alt": "Малотоннажний вантажний автомобіль",
+    "icon": "midtruck",
+    "def": "Вантажний автомобіль на власному шасі (не на базі легкового авто) з окремою кабіною та кузовом (тентовим, цільнометалевим або відкритою платформою), розрахований на перевезення середніх партій вантажу без причепа.",
+    "specs": [
+      [
+        "Довжина кузова",
+        "4–7,5 м"
+      ],
+      [
+        "Ширина",
+        "2,2–2,4 м"
+      ],
+      [
+        "Висота (внутр.)",
+        "2,0–2,4 м"
+      ],
+      [
+        "Вантажопідйомність",
+        "1,5–5 т"
+      ],
+      [
+        "Об'єм кузова",
+        "20–40 м³"
+      ]
+    ],
+    "cargo": "Партії товару для регіональної доставки, будматеріали, меблі, побутова техніка — все, що не потребує повної фури, але більше за мікровантажівку.",
+    "usage": "Регіональні та міжміські перевезення середніх партій вантажу, розвезення товару по торгових точках, коли повна фура економічно невиправдана.",
+    "features": [
+      "Оптимальний баланс місткості й маневреності для середніх партій вантажу",
+      "Ширший вибір типів кузова — тент, цільномет, борт, з гідробортом для завантаження без навантажувача"
+    ],
+    "sumWeight": "1,5–5 т",
+    "sumVolume": "20–40 м³",
+    "sumCargo": "Регіональні середні партії"
+  }
+];
+
+function wheels(x1,x2,y){
+  return `<circle cx="${x1}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="${x2}" cy="${y}" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/>`;
+}
+function cab(x,groundY){
+  return `<path d="M${x} ${groundY-6} L${x} ${groundY-30} L${x+16} ${groundY-30} L${x+24} ${groundY-18} L${x+24} ${groundY-6} Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="${x+8}" y1="${groundY-30}" x2="${x+8}" y2="${groundY-6}" stroke="currentColor" stroke-width="1.4" opacity=".5"/>`;
+}
+const G = 66; // ground line y
+const CTV2_ICONS = {
+  tent:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <rect x="30" y="${G-34}" width="102" height="34" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    ${[42,54,66,78,90,102,114,126].map(x=>`<line x1="${x}" y1="${G-34}" x2="${x}" y2="${G}" stroke="currentColor" stroke-width="1.1" opacity=".55"/>`).join('')}
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  reefer:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <rect x="30" y="${G-16}" width="12" height="16" fill="none" stroke="currentColor" stroke-width="2"/>
+    <rect x="42" y="${G-34}" width="90" height="34" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  dryvan:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <rect x="30" y="${G-34}" width="102" height="34" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <line x1="126" y1="${G-34}" x2="126" y2="${G}" stroke="currentColor" stroke-width="1.4"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  isotherm:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <rect x="31" y="${G-32}" width="99" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <rect x="35" y="${G-28}" width="91" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  roadtrain:()=> `
+    <line x1="2" y1="${G}" x2="138" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(2,G)}
+    <rect x="26" y="${G-28}" width="46" height="28" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="74" y1="${G-6}" x2="84" y2="${G-6}" stroke="currentColor" stroke-width="2"/>
+    <rect x="84" y="${G-28}" width="46" height="28" fill="none" stroke="currentColor" stroke-width="2"/>
+    ${wheels(14,64,G)}${wheels(96,132,G)}
+  `,
+  jumbo:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <path d="M30 ${G-38} L132 ${G-38} L132 ${G-6} L122 ${G-6} L122 ${G-14} L38 ${G-14} L38 ${G-6} L30 ${G-6} Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  container:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <line x1="30" y1="${G-4}" x2="132" y2="${G-4}" stroke="currentColor" stroke-width="2.2"/>
+    <rect x="34" y="${G-30}" width="94" height="26" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    ${[46,58,70,82,94,106,118].map(x=>`<line x1="${x}" y1="${G-30}" x2="${x}" y2="${G-4}" stroke="currentColor" stroke-width="1" opacity=".4"/>`).join('')}
+    ${wheels(16,110,G)}${wheels(118,130,G)}
+  `,
+  tanker:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <rect x="30" y="${G-30}" width="100" height="26" rx="13" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <circle cx="55" cy="${G-30}" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="80" cy="${G-30}" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="105" cy="${G-30}" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  carcarrier:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <line x1="30" y1="${G-8}" x2="132" y2="${G-8}" stroke="currentColor" stroke-width="2"/>
+    <line x1="34" y1="${G-24}" x2="128" y2="${G-30}" stroke="currentColor" stroke-width="2"/>
+    <path d="M40 ${G-8} l8 -7 h14 l6 7z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M80 ${G-8} l8 -7 h14 l6 7z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M46 ${G-24} l7 -6 h12 l5 6z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M92 ${G-27} l7 -6 h12 l5 6z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  grain:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <path d="M30 ${G} L36 ${G-32} L126 ${G-32} L132 ${G} Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    ${wheels(16,116,G)}${wheels(122,132,G)}
+  `,
+  dump:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(4,G)}
+    <path d="M34 ${G-6} L128 ${G-30} L128 ${G-6} Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <line x1="34" y1="${G-6}" x2="34" y2="${G-2}" stroke="currentColor" stroke-width="2"/>
+    ${wheels(16,108,G)}${wheels(118,128,G)}
+  `,
+  van:()=> `
+    <line x1="10" y1="${G}" x2="130" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    <path d="M18 ${G-8} L18 ${G-30} L96 ${G-30} L112 ${G-8} Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <line x1="78" y1="${G-30}" x2="78" y2="${G-8}" stroke="currentColor" stroke-width="1.6"/>
+    <line x1="84" y1="${G-19}" x2="108" y2="${G-8}" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+    ${wheels(38,96,G)}
+  `,
+  midtruck:()=> `
+    <line x1="4" y1="${G}" x2="136" y2="${G}" stroke="currentColor" stroke-width="2"/>
+    ${cab(6,G)}
+    <rect x="36" y="${G-26}" width="86" height="26" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    ${wheels(18,60,G)}${wheels(100,120,G)}
+  `
+};
+
+
+function ctv2ExtractSpec(specs, keywords){
+  for (const [l,v] of specs){
+    const low = l.toLowerCase();
+    for (const k of keywords){ if (low.includes(k)) return v; }
+  }
+  return null;
+}
+function ctv2DimH(x1,x2,y,label){
+  return `<line class="dim-line" x1="${x1}" y1="${y}" x2="${x2}" y2="${y}"/>
+    <line class="dim-line" x1="${x1}" y1="${y-3}" x2="${x1}" y2="${y+3}"/>
+    <line class="dim-line" x1="${x2}" y1="${y-3}" x2="${x2}" y2="${y+3}"/>
+    <text class="dim-label" x="${(x1+x2)/2}" y="${y-4}" text-anchor="middle">${label}</text>`;
+}
+function ctv2DimV(x,y1,y2,label){
+  return `<line class="dim-line" x1="${x}" y1="${y1}" x2="${x}" y2="${y2}"/>
+    <line class="dim-line" x1="${x-3}" y1="${y1}" x2="${x+3}" y2="${y1}"/>
+    <line class="dim-line" x1="${x-3}" y1="${y2}" x2="${x+3}" y2="${y2}"/>
+    <text class="dim-label" x="${x+5}" y="${(y1+y2)/2+3}">${label}</text>`;
+}
+function ctv2BuildDiagram(t){
+  const length = ctv2ExtractSpec(t.specs, ['довжина кузова','загальна довжина','довжина']);
+  const width  = ctv2ExtractSpec(t.specs, ['ширина']);
+  const height = ctv2ExtractSpec(t.specs, ['висота']);
+  const sideIcon = CTV2_ICONS[t.icon] ? CTV2_ICONS[t.icon]() : '';
+
+  let x1=0,x2=150,vw=150,vh=92,vx=-6,vy=-16;
+  let svg = '';
+  svg += `<g transform="translate(0,0)">${sideIcon}</g>`;
+  if(length) svg += ctv2DimH(4,136,-8,length);
+  if(height) svg += ctv2DimV(146,28,66,height);
+
+  let totalW = 150, totalH = 92, extraRight = 0;
+  if(width){
+    // front-view box to the right of side view
+    const fx = 168, fw = 40, fy=28, fh=38;
+    svg += `<rect x="${fx}" y="${fy}" width="${fw}" height="${fh}" fill="none" stroke="currentColor" stroke-width="1.6" rx="1"/>`;
+    svg += ctv2DimH(fx, fx+fw, fy-8, width);
+    if(height) svg += ctv2DimV(fx+fw+6, fy, fy+fh, height);
+    extraRight = 60;
+  }
+  totalW += extraRight;
+
+  return `<svg viewBox="-6 -16 ${totalW} ${totalH+18}" xmlns="http://www.w3.org/2000/svg">${svg}</svg>`;
+}
+
+const CTV2_PHOTOS = {
+  "T-01": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec51320d6c3.22007906_T-01.jpg",
+  "T-02": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec518b52a26.38064859_T-02.jpg",
+  "T-03": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec51c90e626.15655108_T-03.jpg",
+  "T-04": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec520c43651.46126638_T-04.jpg",
+  "T-05": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6aa004a4a224b3.01814341_T-05.jpg",
+  "T-06": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec529ca5487.82674038_T-06.jpg",
+  "T-07": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec52e084af1.33828903_T-07.jpg",
+  "T-08": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec532caa1b0.37621276_T-08.jpg",
+  "T-09": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec538ee2cb5.02065081_T-09.jpg",
+  "T-10": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec53dd2d985.34559769_T-10.jpg",
+  "T-11": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec541c6d434.94682371_T-11.jpg",
+  "T-12": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec545bad406.98040615_T-12.jpg",
+  "T-13": "https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9ec54bc4e2f7.26250870_T-13.jpg"
+};
+
+const cardsEl = document.getElementById('ctv2-cards');
+const indexEl = document.getElementById('ctv2-indexGrid');
+const sumEl = document.getElementById('ctv2-summaryBody');
+
+function ctv2ScrollTo(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+CTV2_TYPES.forEach(t=>{
+  const a = document.createElement('a');
+  a.href = 'javascript:void(0)';
+  a.innerHTML = `<span class="code">${t.code}</span><span>${t.name}</span>`;
+  a.onclick = function(e){ e.preventDefault(); ctv2ScrollTo('ctv2-'+t.code); return false; };
+  indexEl.appendChild(a);
+
+  const sec = document.createElement('section');
+  sec.className = 'card';
+  sec.id = 'ctv2-'+t.code;
+  sec.innerHTML = `
+    <div class="card-top">
+      <div class="icon-box"><img src="${CTV2_PHOTOS[t.code] || ''}" alt="${t.name}" loading="lazy"></div>
+      <div class="card-title">
+        <span class="code-tag">${t.code}</span>
+        <h2>${t.name}</h2>
+        <p class="alt">${t.alt}</p>
+      </div>
+    </div>
+    <p class="definition">${t.def}</p>
+    <div class="spec-grid">
+      ${t.specs.map(([l,v])=>`<div class="spec"><div class="label">${l}</div><div class="value">${v}</div></div>`).join('')}
+    </div>
+    <div class="field-row"><div class="f-label">Тип продукції</div><div class="f-value">${t.cargo}</div></div>
+    <div class="field-row"><div class="f-label">Застосування</div><div class="f-value">${t.usage}</div></div>
+    <ul class="features">${t.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+    <a class="back-top">↑ до переліку типів</a>
+  `;
+  sec.querySelector('.back-top').onclick = function(e){ e.preventDefault(); ctv2ScrollTo('ctv2-indexNav'); return false; };
+  cardsEl.appendChild(sec);
+
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td class="name">${t.name}</td>
+    <td class="num">${t.sumWeight}</td>
+    <td class="num">${t.sumVolume}</td>
+    <td>${t.sumCargo}</td>
+  `;
+  tr.querySelector('.name').onclick = function(){ ctv2ScrollTo('ctv2-'+t.code); };
+  sumEl.appendChild(tr);
+});
+
+document.getElementById('ctv2MetaCount').textContent = CTV2_TYPES.length;
+})();
+</script>

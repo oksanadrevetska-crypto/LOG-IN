@@ -1,0 +1,276 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv4{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv4, .ctv4 *{box-sizing:border-box;}
+  .ctv4{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv4 header.hero{
+    padding:34px 0 26px;
+    border-bottom:2px solid var(--navy);
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+  .ctv4 header.hero .hero-text{flex:1 1 360px; min-width:260px;}
+  .ctv4 header.hero .hero-image{
+    flex:0 0 300px;
+    width:300px;
+    height:220px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .ctv4 header.hero .hero-image img{width:100%; height:100%; object-fit:cover; display:block;}
+  @media (max-width:640px){
+    .ctv4 header.hero .hero-image{width:100%; height:200px; flex:1 1 100%;}
+  }
+
+  .ctv4 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv4 h1{font-size:27px; font-weight:700; color:var(--navy); margin:0 0 14px;}
+  .ctv4 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+
+  .ctv4 nav.index{margin:26px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv4 nav.index .index-title{padding:11px 16px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv4 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr));}
+  .ctv4 .index-grid a{display:block; padding:11px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13.5px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv4 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv4 section{padding:28px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv4 h2{font-size:20px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv4 h3{font-size:15.5px; font-weight:700; color:var(--navy-light); margin:22px 0 8px;}
+  .ctv4 h3:first-of-type{margin-top:6px;}
+  .ctv4 p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 12px;}
+  .ctv4 .back-top{display:inline-block; margin-top:8px; font-size:12px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv4 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv4 ul.checklist{list-style:none; padding:0; margin:12px 0; display:grid; gap:8px;}
+  .ctv4 ul.checklist li{position:relative; padding-left:22px; font-size:14.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv4 ul.checklist li::before{content:"—"; position:absolute; left:0; top:0; color:var(--navy-light); font-weight:700;}
+
+  .ctv4 .hierarchy{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:14px 0;}
+  .ctv4 .hierarchy .step{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:14px 16px;}
+  .ctv4 .hierarchy .step .n{font-size:11px; font-weight:700; color:var(--peach-ink); text-transform:uppercase; letter-spacing:.03em;}
+  .ctv4 .hierarchy .step b{display:block; color:var(--navy); font-size:14.5px; margin:4px 0 4px;}
+  .ctv4 .hierarchy .step span{font-size:13px; color:var(--ink-soft); text-align:left; display:block;}
+
+  .ctv4 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:16px 18px; margin:16px 0;}
+  .ctv4 .callout .callout-title{font-weight:700; color:var(--peach-ink); font-size:14.5px; margin:0 0 10px;}
+  .ctv4 .tip-list{display:grid; gap:9px; margin:0;}
+  .ctv4 .tip-list .tip{display:flex; gap:8px; align-items:flex-start; font-size:13.5px; color:var(--peach-ink); text-align:left;}
+  .ctv4 .tip-list .tip .emoji{flex:0 0 auto;}
+
+  .ctv4 .value-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin:14px 0;}
+  .ctv4 .value-grid .card{background:#fff; border:1px solid var(--line); border-radius:6px; padding:13px 16px;}
+  .ctv4 .value-grid .card b{display:block; color:var(--navy); font-size:13.5px; margin-bottom:4px;}
+  .ctv4 .value-grid .card span{font-size:13px; color:var(--ink-soft); text-align:left; display:block;}
+
+  .ctv4 footer.closing{padding:30px 0 10px; border-bottom:none;}
+  .ctv4 footer.closing p{text-align:justify;}
+</style>
+
+<div class="ctv4">
+
+  <header class="hero" id="ctv4-top">
+    <div class="hero-text">
+      <p class="kicker">Модуль 1 · Знайомство з компанією</p>
+      <h1>Внутрішній трудовий розпорядок компанії</h1>
+      <div class="lead">
+        <p>Даний документ встановлює правила та положення, що регулюють трудові відносини в межах компанії. Він є обов'язковим для всіх працівників і керівництва й має на меті забезпечити організоване, продуктивне та гармонійне робоче середовище.</p>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9fd0de02d077.40338489_%D1%82%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B8%D0%B9%D1%80%D0%BE%D0%B7%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA.jpg" alt="Внутрішній трудовий розпорядок" loading="lazy">
+    </div>
+  </header>
+
+  <nav class="index" id="ctv4-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv4-indexGrid">
+      <a data-target="ctv4-hierarchy">Ієрархія рішень</a>
+      <a data-target="ctv4-schedule">Графік роботи</a>
+      <a data-target="ctv4-principles">Корпоративні принципи</a>
+      <a data-target="ctv4-workspace">Робочий простір</a>
+      <a data-target="ctv4-equipment">Обладнання та ресурси</a>
+      <a data-target="ctv4-sickleave">Лікарняні</a>
+      <a data-target="ctv4-vacation">Відпустки</a>
+      <a data-target="ctv4-rules">Дотримання правил</a>
+    </div>
+  </nav>
+
+  <section id="ctv4-hierarchy">
+    <h2>Ієрархія рішень</h2>
+    <p>У всіх рішеннях спираємось на послідовність важливості: спершу інтереси компанії, потім клієнта, і далі перевізника. Це не просто порядок — це основа стабільності.</p>
+    <div class="hierarchy">
+      <div class="step"><span class="n">01</span><b>Компанія</b><span>Фундамент, який забезпечує умови для роботи, розвиток і стабільність усіх сторін.</span></div>
+      <div class="step"><span class="n">02</span><b>Клієнт</b><span>Джерело росту, з яким ми будуємо довготривалі взаємини.</span></div>
+      <div class="step"><span class="n">03</span><b>Перевізник</b><span>Надійний партнер, завдяки якому ми реалізуємо обіцяне клієнту.</span></div>
+    </div>
+    <p>Дотримання цієї ієрархії допомагає ухвалювати рішення швидко, системно і в інтересах спільного результату.</p>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-schedule">
+    <h2>Графік роботи</h2>
+    <ul class="checklist">
+      <li>Графік роботи встановлюється з 09:30 до 17:30 з понеділка по п'ятницю, з однією годинною перервою на обід, яка встановлюється протягом дня на розсуд працівника.</li>
+      <li>Вихід з роботи раніше встановленого графіку можливий лише за попередньою згодою безпосереднього керівника або директора.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-principles">
+    <h2>Наші корпоративні принципи</h2>
+
+    <h3>Пунктуальність</h3>
+    <p><b>Без запізнень.</b> Вчасний прихід на роботу, зустрічі чи дзвінки — прояв поваги. Це формує довіру і дисципліну в команді.</p>
+    <p>Всі працівники повинні бути на робочому місці не пізніше встановленого часу початку робочого дня о 09:30. Пунктуальність є обов'язковою для всіх працівників компанії. Запізнення на роботу більше ніж на 5–10 хвилин без попереднього повідомлення недопустиме.</p>
+    <p>Запізнення без поважних причин є недопустимим і може бути підставою для застосування дисциплінарних заходів, якщо таких запізнень протягом місяця було три та більше. Під штрафними санкціями мається на увазі відпрацювання часу запізнення у подвійному розмірі після основного робочого часу. Завдання на цей час відпрацювання встановлює безпосередній керівник.</p>
+    <p>Прохання про скорочений день повинні бути направлені безпосередньому керівнику заздалегідь (мінімум за день), обґрунтовані причинами, за винятком форс-мажорних (того, чого не можна передбачити) обставин. У разі тривалої відсутності доцільніше повністю взяти вихідний день, який може бути списаний з наявних днів відпустки. У разі відсутності вільних днів, ставка за такі дні не буде оплачена.</p>
+    <p>Якщо скорочення робочого часу потрібно в першій половині дня, працівник повинен бути на робочому місці до 13:00, а якщо в другій — можлива відсутність не раніше 13:00.</p>
+    <p>Якщо такі запити на скорочений робочий день набудуть систематичного характеру, проводитимуться індивідуальні розмови дисциплінарного характеру. Варто усвідомлювати, що від результатів кожного залежать не лише особисті показники, а й результати колег — збереження відповідальності та залученості до поточної роботи по перевезеннях є важливим.</p>
+
+    <h3>Безпека та здоров'я на робочому місці</h3>
+    <p><b>Повага до себе та колег:</b> підтримувати чистоту та порядок на робочому місці, кухні та в спільних зонах.</p>
+    <p>Компанія забезпечує працівників безпечним робочим місцем, справною технікою та всіма необхідними засобами. Кожен з працівників відповідально ставиться до дотримання правил охорони праці та власного здоров'я. Тому вчасно йде на лікарняний при перших ознаках хвороби, щоб не погіршувати власний стан та не наражати колектив на небезпеку.</p>
+
+    <h3>Внутрішня комунікація та процеси</h3>
+    <p><b>Етикет і комунікація.</b> Ми вітаємось з колегами, клієнтами та перевізниками при першому контакті за день. Це простий жест поваги й хорошого тону. Привітання з Днем народження та іншими важливими датами колег і партнерів — маленька увага, яка створює велику довіру.</p>
+    <p><b>Жодної лайки у бік клієнтів чи колег.</b> Професійність тримаємо навіть у складних ситуаціях.</p>
+    <p>Кожен з працівників може внести свій внесок, завжди має можливість висловити свою думку, яка буде почута. Працівники будують ефективну комунікацію, спілкуються у чемній, толерантній та доброзичливій манері, обмінюються досвідом та інформацією.</p>
+
+    <div class="callout">
+      <p class="callout-title">⁉️ Комунікація в команді — це не дрібниця. Щоб усе рухалось злагоджено, варто триматись базових принципів:</p>
+      <div class="tip-list">
+        <div class="tip"><span class="emoji">🔗</span><span>Бути на зв'язку — must have. Незалежно від того, в офісі чи вдома: ми — ланки одного ланцюга. Випадає хтось один — зависає процес.</span></div>
+        <div class="tip"><span class="emoji">👀</span><span>Якщо надійшло смс (питання/інформація) — варто дати реакцію. Навіть якщо відповіді немає одразу — важливо дати знати, що повідомлення побачено, взято в роботу або уточнюється. В іншому випадку це виглядає як ігнорування.</span></div>
+        <div class="tip"><span class="emoji">⏳</span><span>Не гальмувати процес. Якщо очікується відповідь — варто реагувати. Тривале очікування на просте питання виглядає як відсутність залученості й контролю над ситуацією.</span></div>
+        <div class="tip"><span class="emoji">🧠</span><span>Писати по суті. Чітко, без «води» й довгих передмов. Це демонструє експертність і повагу до часу колег.</span></div>
+        <div class="tip"><span class="emoji">🤝</span><span>Вітання, «дякую», «будь ласка» — це не формальність. Це про повагу.</span></div>
+      </div>
+    </div>
+
+    <p>Працівники виконують свою роботу якісно й щиро переймаються результатом, усвідомлюють особисту відповідальність за фінансові та іміджеві наслідки. Компанія ставить високі вимоги до себе, прагне ставати професіоналами у всьому, чим займається.</p>
+
+    <div class="value-grid">
+      <div class="card"><b>Проблема = рішення</b><span>Якщо виникла складність — пропонуємо варіанти її вирішення, а не просто ставимо перед фактом.</span></div>
+      <div class="card"><b>Команда понад «я»</b><span>Ми всі працюємо на спільний результат. Кожен успіх — це спільна перемога.</span></div>
+      <div class="card"><b>Запитуй, якщо не ясно</b><span>Краще уточнити, ніж зробити неправильно. Відкритість у спілкуванні — це економія часу та ресурсів.</span></div>
+      <div class="card"><b>Ініціатива вітається</b><span>Пропонуй ідеї, пробуй нове. Розвиток компанії можливий лише тоді, коли шукаємо кращі рішення.</span></div>
+      <div class="card"><b>Конфлікти — без емоцій</b><span>Обговорюємо факти, а не людей. Головне — знайти рішення, а не винного.</span></div>
+      <div class="card"><b>Ввічливість завжди</b><span>Коректне спілкування робить атмосферу комфортною. Навіть у стресових ситуаціях лишаємося людьми.</span></div>
+      <div class="card"><b>Говоримо відкрито</b><span>Якщо є труднощі чи ідеї — озвучуємо. Краще розв'язувати питання відразу, ніж накопичувати.</span></div>
+      <div class="card"><b>Використовуємо шаблони</b><span>Стандарти економлять час і знижують ризик помилок. Це зручно для кожного.</span></div>
+      <div class="card"><b>Дотримуємося регламентів</b><span>Вони створені для чіткості. Самодіяльність призводить до хаосу і помилок.</span></div>
+      <div class="card"><b>Домовленості = письмово</b><span>Усе фіксуємо в робочих таблицях чи чаті. Це гарантія, що всі пам'ятають деталі.</span></div>
+      <div class="card"><b>Ризик проблеми = попередь одразу</b><span>Якщо виникла проблема з дедлайном чи процесом — говоримо заздалегідь, щоб знайти рішення.</span></div>
+    </div>
+
+    <h3>Комунікація з клієнтами/перевізниками</h3>
+    <p><b>Репутація = відповідальність.</b> Кожна дія чи слово — відображення компанії. Компанія дбає про свій імідж у будь-якій ситуації. Кожен прояв назовні — обличчя компанії.</p>
+    <p><b>Клієнтів/перевізників не ігноруємо.</b> Кожен запит важливий. Навіть якщо немає готової відповіді — повідомляємо, що питання в роботі.</p>
+    <p><b>Відповідальність поза робочим часом.</b> Якщо дзвінок надходить після робочого часу — це не просто так. Такі питання зазвичай термінові й важливі. На телефонні дзвінки та повідомлення від клієнтів чи перевізників варто реагувати навіть поза графіком — це про надійність і сервіс 24/7.</p>
+    <p>Цінність партнерських відносин та повага до клієнтів/перевізників є дуже важливими аспектами для компанії. Комунікація з клієнтами повинна бути ефективною та професійною, з урахуванням потреб та очікувань клієнтів. Працівники компанії виявляють повагу і стриманість у відносинах із контрагентами та докладають зусиль для отримання найбільш вигідної для компанії пропозиції.</p>
+
+    <h3>Конфіденційність та керування даними</h3>
+    <p>Працівники не розголошують і не використовують в інший спосіб конфіденційну та іншу інформацію з обмеженим доступом про компанію чи контрагентів, відому їм у зв'язку з виконанням своїх повноважень та професійних обов'язків. Працівники не повинні використовувати будь-які відомості про внутрішні процеси, будь-яку інформацію, одержану в процесі виконання своїх повноважень, з метою отримання особистої вигоди чи завдання шкоди компанії.</p>
+
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-workspace">
+    <h2>Організація робочого простору</h2>
+    <ul class="checklist">
+      <li>На робочому місці потрібно підтримувати чистоту та порядок.</li>
+      <li>Працівники зобов'язані повертати усе обладнання та інвентар, використане під час роботи, на місце та у належному стані. Вимикати робочий пристрій в кінці робочого дня.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-equipment">
+    <h2>Використання обладнання та ресурсів</h2>
+    <ul class="checklist">
+      <li>Обладнання та ресурси компанії повинні використовуватися тільки для службових цілей.</li>
+      <li>Забороняється використання обладнання та ресурсів компанії для особистих потреб.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-sickleave">
+    <h2>Лікарняні</h2>
+    <ul class="checklist">
+      <li>Працівники зобов'язані повідомляти свого керівника про необхідність лікарняних днів за день до невиходу, за винятком форс-мажорних (тих, яких не можна передбачити) обставин.</li>
+      <li>Лікарняні оплачуються відповідно до ставки, передбаченої для посади працівника.</li>
+      <li>Якщо характер роботи дозволяє виконання обов'язків з дому, лікарняні оплачуються. В іншому випадку вони не компенсуються, оскільки виконання роботи віддалено в цьому випадку неможливе.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-vacation">
+    <h2>Відпустки</h2>
+    <ul class="checklist">
+      <li>Графік відпусток формується на річний період і погоджується з керівництвом компанії. Він враховує загальні потреби компанії, плани проєктів та індивідуальні побажання працівників.</li>
+      <li>Працівник може скористатися відпусткою в повному обсязі після завершення 6 місяців роботи в компанії. Це забезпечує необхідний час для адаптації та засвоєння основних обов'язків. Для працівників, що працюють у компанії менше 6 місяців, введена система: два дні відпустки за кожний повний місяць роботи. Ці дні можна використовувати як окремо, так і об'єднувати для тривалого відпочинку.</li>
+      <li>Кожен працівник має право на 18 календарних днів (після 6 місяців роботи) оплачуваної відпустки на свій розсуд у річному періоді.</li>
+      <li>Протягом року в календарі відпусток визначено певні дні, що вважаються вихідними для компанії в цілому, але передбачають за необхідності виконання посадових обов'язків критичного характеру (Додаток 1).</li>
+      <li>Дні відпустки можуть бути використані поодинці або накопичені для тривалого відпочинку.</li>
+      <li>Невикористані дні відпустки в кінці року згорають, тому варто їх використовувати протягом року, зважаючи на завантаженість та особисті плани.</li>
+      <li>В межах відділу в один і той самий період часу у відпустці не може бути декілька працівників — це важливо враховувати при формуванні графіку відпусток на рік.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv4-rules" style="border-bottom:none;">
+    <h2>Дотримання внутрішніх правил та процедур</h2>
+    <ul class="checklist">
+      <li>Всі працівники повинні дотримуватися внутрішніх правил та процедур компанії, включаючи правила безпеки, конфіденційності та інші визначені внутрішні документи.</li>
+    </ul>
+    <a class="back-top" data-target="ctv4-indexNav">↑ до переліку</a>
+  </section>
+
+  <footer class="closing">
+    <p>Цей трудовий розпорядок створений для забезпечення здорової організації трудових відносин та ефективного функціонування компанії. Він спрямований на захист прав працівників та забезпечення стабільності трудового процесу.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function ctv4ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv4 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv4ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

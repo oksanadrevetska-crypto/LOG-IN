@@ -1,0 +1,279 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv3{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv3, .ctv3 *{box-sizing:border-box;}
+  .ctv3{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:820px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv3 header.hero{padding:34px 0 26px; border-bottom:2px solid var(--navy);}
+  .ctv3 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv3 h1{font-size:30px; font-weight:700; color:var(--navy); margin:0 0 16px;}
+  .ctv3 .lead p{font-size:15px; color:var(--ink-soft); text-align:justify; margin:0 0 12px;}
+
+  .ctv3 nav.index{margin:26px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv3 nav.index .index-title{padding:11px 16px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv3 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr));}
+  .ctv3 .index-grid a{display:block; padding:11px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13.5px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv3 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv3 section{padding:30px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv3 h2{font-size:21px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv3 p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 12px;}
+  .ctv3 .back-top{display:inline-block; margin-top:10px; font-size:12px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv3 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv3 .card-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:14px;}
+  .ctv3 .card{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:16px 18px;}
+  .ctv3 .card h3{font-size:14.5px; font-weight:700; color:var(--navy); margin:0 0 6px;}
+  .ctv3 .card p{font-size:13.5px; margin:0; color:var(--ink-soft); text-align:left !important;}
+
+  .ctv3 ul.checklist{list-style:none; padding:0; margin:14px 0 0; display:grid; gap:9px;}
+  .ctv3 ul.checklist li{position:relative; padding-left:24px; font-size:14.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv3 ul.checklist li::before{content:"✓"; position:absolute; left:0; top:0; color:var(--navy-light); font-weight:700;}
+
+  .ctv3 .callout{display:flex; gap:10px; align-items:flex-start; background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:14px 16px; margin-top:16px;}
+  .ctv3 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13.5px; text-align:left;}
+
+  .ctv3 .role-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin-top:14px;}
+  .ctv3 .role{background:#fff; border:1px solid var(--line); border-radius:5px; padding:10px 14px; font-size:13.5px; font-weight:600; color:var(--navy); text-align:center;}
+  .ctv3 .role.owner{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+  .ctv3 .org-image{
+    width:100%;
+    height:480px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    margin-top:14px;
+  }
+  .ctv3 .org-image img{width:100%; height:100%; object-fit:contain; display:block;}
+  @media (max-width:640px){
+    .ctv3 .org-image{height:320px;}
+  }
+
+  .ctv3 .timeline{margin-top:16px; border-left:2px solid var(--line); padding-left:20px; display:grid; gap:20px;}
+  .ctv3 .timeline .point{position:relative;}
+  .ctv3 .timeline .point::before{content:""; position:absolute; left:-25px; top:3px; width:9px; height:9px; border-radius:50%; background:var(--peach-border);}
+  .ctv3 .timeline .date{font-size:11.5px; font-weight:700; color:var(--peach-ink); text-transform:uppercase; letter-spacing:.03em;}
+  .ctv3 .timeline h3{font-size:14.5px; font-weight:700; color:var(--navy); margin:4px 0 4px;}
+  .ctv3 .timeline p{font-size:13.5px; margin:0;}
+
+  .ctv3 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px;}
+  @media (max-width:600px){ .ctv3 .two-col{grid-template-columns:1fr;} }
+
+  .ctv3 .tag-cloud{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;}
+  .ctv3 .tag{background:var(--table-stripe); border:1px solid var(--line); color:var(--navy); font-size:12.5px; font-weight:600; padding:5px 12px; border-radius:999px;}
+
+  .ctv3 footer.closing{padding:34px 0 10px; text-align:center; border-bottom:none;}
+  .ctv3 footer.closing h2{font-size:22px;}
+  .ctv3 footer.closing p{text-align:center; max-width:60ch; margin:0 auto;}
+</style>
+
+<div class="ctv3">
+
+  <header class="hero" id="ctv3-top">
+    <p class="kicker">Модуль 1 · Знайомство з компанією</p>
+    <h1>Вітаємо в SIBWAY LOGISTICS!</h1>
+    <div class="lead">
+      <p>Перед тим як розпочати роботу, познайомимось ближче: хто ми, чим займаємося і які цінності об'єднують нас.</p>
+      <p>Наша діяльність — це не просто перевезення, а комплексна організація логістичних процесів, у яких важливі чіткість, відповідальність і увага до деталей. Тепер ти — частина цього процесу.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv3-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv3-indexGrid">
+      <a data-target="ctv3-profession">Професія логіста</a>
+      <a data-target="ctv3-whatwedo">Що ми робимо</a>
+      <a data-target="ctv3-mission">Місія та мета</a>
+      <a data-target="ctv3-values">Корпоративні цінності</a>
+      <a data-target="ctv3-structure">Організаційна структура</a>
+      <a data-target="ctv3-history">Наша історія</a>
+      <a data-target="ctv3-clients">Хто наш клієнт</a>
+      <a data-target="ctv3-services">Наші послуги</a>
+      <a data-target="ctv3-expectations">Очікування від тебе</a>
+    </div>
+  </nav>
+
+  <section id="ctv3-profession">
+    <h2>Професія логіста</h2>
+    <p>Логістика допомагає світовій економіці рухатися та забезпечує людство всім необхідним. Як логіст, ти зможеш контролювати рух товарів по всьому світу й допомагати людям отримувати необхідне вчасно.</p>
+    <div class="card-grid">
+      <div class="card"><h3>Глобальна присутність</h3><p>Логістика потрібна будь-якому бізнесу — від роздрібної торгівлі до міжнародних компаній.</p></div>
+      <div class="card"><h3>Висока заробітна плата</h3><p>Логісти — високооплачувані фахівці, чиї навички дуже цінні для бізнесу.</p></div>
+      <div class="card"><h3>Незалежність</h3><p>Можливість працювати в різних сферах і самостійно обирати, де і як працювати.</p></div>
+      <div class="card"><h3>Неперервний розвиток</h3><p>Галузь постійно оновлюється — це дозволяє вдосконалювати знання й залишатися в тренді.</p></div>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-whatwedo">
+    <h2>Що ми робимо</h2>
+    <p>Наша команда забезпечує повний спектр послуг з логістики та транспортування:</p>
+    <ul class="checklist">
+      <li>Організація перевезень будь-яких вантажів</li>
+      <li>Вибір оптимального транспортного засобу</li>
+      <li>Забезпечення дотримання термінів доставки</li>
+      <li>Допомога з митним оформленням та страхуванням вантажу</li>
+    </ul>
+    <div class="callout"><p>Ми вважаємо, що побудова довгострокових відносин з нашими клієнтами є ключовою для успіху нашого бізнесу.</p></div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-mission">
+    <h2>Місія та мета компанії</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Мета</h3>
+        <p>Розвиток логістичної галузі України та підтримка українського бізнесу на міжнародній арені, щоб кордонів між країнами та ринками для наших клієнтів не існувало.</p>
+      </div>
+      <div class="card">
+        <h3>Ціль</h3>
+        <p>Надання якісних і надійних послуг транспортного експедування, що дозволяє задовольняти потреби клієнтів, зміцнювати партнерські відносини та залучати нових клієнтів через рекомендації.</p>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-values">
+    <h2>Наші корпоративні цінності</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Гнучкість</h3><p>Здатність адаптуватися до змін у вимогах і потребах клієнтів.</p></div>
+      <div class="card"><h3>Відкритість</h3><p>Готовність до співпраці й діалогу, що зміцнює довіру та партнерство.</p></div>
+      <div class="card"><h3>Лояльність</h3><p>Здатність слухати, розуміти й враховувати побажання клієнтів.</p></div>
+      <div class="card"><h3>Розвиток</h3><p>Постійне вдосконалення процесів, послуг і впровадження нових технологій.</p></div>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-structure">
+    <h2>Організаційна структура</h2>
+    <div class="org-image">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6a9fcdba7f9170.75818231_%D0%A1%D1%82%D1%80-%D1%80%D0%B0.jpg" alt="Організаційна структура SIBWAY LOGISTICS" loading="lazy">
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-history">
+    <h2>Наша історія</h2>
+    <div class="timeline">
+      <div class="point">
+        <div class="date">02/07/2019 · Старт подорожі</div>
+        <h3>Народження ідеї</h3>
+        <p>Створення компанії, щоб надавати логістичні послуги, на які можна покластися.</p>
+      </div>
+      <div class="point">
+        <div class="date">Перші попутники</div>
+        <h3>Формування команди</h3>
+        <p>Найм перших співробітників, які розділили цінності й амбіції компанії.</p>
+      </div>
+      <div class="point">
+        <div class="date">Розширення маршрутів</div>
+        <h3>Нові відділи</h3>
+        <p>Створення нових відділів, щоб забезпечити комплексний підхід до обслуговування клієнтів.</p>
+      </div>
+      <div class="point">
+        <div class="date">Сьогодні</div>
+        <h3>Точка сьогодні</h3>
+        <p>Пошук і приєднання нових талантів, серед яких тепер і ти.</p>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-clients">
+    <h2>Хто наш клієнт</h2>
+    <p>Компанії, які експортують чи імпортують продукцію:</p>
+    <div class="tag-cloud">
+      <span class="tag">Сільське господарство (зернові, добрива, насіння, техніка)</span>
+      <span class="tag">Харчові добавки</span>
+      <span class="tag">Будівельний сегмент</span>
+      <span class="tag">Сировина (папір, плівка, пакування, гранули)</span>
+      <span class="tag">Виробниче обладнання</span>
+      <span class="tag">ADR — небезпечні вантажі</span>
+    </div>
+    <p style="margin-top:16px;">Прямі рейси з країн:</p>
+    <div class="tag-cloud">
+      <span class="tag">Польща</span><span class="tag">Франція</span><span class="tag">Італія</span>
+      <span class="tag">Іспанія</span><span class="tag">Країни Прибалтики</span><span class="tag">Нідерланди</span>
+      <span class="tag">Туреччина</span><span class="tag">Румунія</span><span class="tag">Словаччина</span>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-services">
+    <h2>Які послуги ми надаємо</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Міжнародні перевезення FTL</h3>
+        <p>Full Truck Load — повністю завантажена вантажівка вагою 20–22 т під один вантаж клієнта.</p>
+      </div>
+      <div class="card">
+        <h3>Збірні вантажі LTL</h3>
+        <p>Less Than Truckload — вантажівка, завантажена збірними вантажами кількох клієнтів, від 1 палети.</p>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv3-expectations" style="border-bottom:none;">
+    <h2>Очікування від тебе після стажування</h2>
+    <ul class="checklist">
+      <li>Самостійна робота на платформах пошуку вантажів і транспорту</li>
+      <li>Досконале знання алгоритму міжнародного перевезення</li>
+      <li>Знання внутрішніх правил компанії</li>
+      <li>Розуміння своїх та чужих зон відповідальності</li>
+      <li>Виконання нормативів діяльності та поставлених завдань</li>
+      <li>Виконання фінансового плану</li>
+      <li>Дотримання внутрішніх регламентів роботи компанії</li>
+      <li>Дотримання правил внутрішнього трудового розпорядку</li>
+    </ul>
+    <a class="back-top" data-target="ctv3-indexNav">↑ до переліку</a>
+  </section>
+
+  <footer class="closing">
+    <h2>Раді вітати тебе в нашій команді!</h2>
+    <p>Попереду — цікаві завдання, нові маршрути й люди. Ласкаво просимо в SIBWAY LOGISTICS!</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function ctv3ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv3 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv3ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>
