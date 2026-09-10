@@ -93,8 +93,19 @@
   .ctv10 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
   .ctv10 table.doc-table td.key{font-weight:700; color:var(--navy);}
 
-  .ctv10 .case-box{background:#fff; border:1px solid var(--line); border-radius:6px; padding:16px 18px; margin:14px 0;}
-  .ctv10 .case-box .case-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:var(--peach-ink); margin-bottom:8px;}
+  .ctv10 .map-box{
+    width:100%;
+    height:440px;
+    background:var(--table-stripe);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    margin:14px 0 18px;
+  }
+  .ctv10 .map-box img{width:100%; height:100%; object-fit:contain; display:block;}
+  @media (max-width:640px){
+    .ctv10 .map-box{height:280px;}
+  }
 </style>
 
 <div class="ctv10">
@@ -125,7 +136,6 @@
       <a data-target="ctv10-ddp">DDP</a>
       <a data-target="ctv10-summary">Зведена таблиця</a>
       <a data-target="ctv10-steps">5 кроків менеджера</a>
-      <a data-target="ctv10-case">Практичний кейс</a>
     </div>
   </nav>
 
@@ -147,6 +157,9 @@
   <section id="ctv10-scale">
     <h2>Логіка шкали: від E до D</h2>
     <p>Усі 11 умов Incoterms об'єднані в 4 групи за першою літерою — шкала від мінімуму обов'язків продавця до максимуму. П'ять термінів цього уроку покривають усю шкалу:</p>
+    <div class="map-box">
+      <img src="https://d1yei2z3i6k35z.cloudfront.net/18629046/6aa136a6918121.32165008_2020.jpg" alt="Логіка шкали Incoterms 2020 від E до D" loading="lazy">
+    </div>
     <div class="table-wrap">
       <table class="doc-table">
         <thead><tr><th>Група</th><th>Логіка</th><th>Термін у цьому уроці</th></tr></thead>
@@ -260,7 +273,7 @@
     <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
   </section>
 
-  <section id="ctv10-steps">
+  <section id="ctv10-steps" style="border-bottom:none;">
     <h2>Що робити менеджеру далі — 5 кроків</h2>
     <ol class="steps">
       <li>З'ясувати Incoterm у клієнта одразу на етапі виявлення потреб — не залишати «на потім».</li>
@@ -268,21 +281,6 @@
       <li>Визначити обсяг послуг для прорахунку: тільки перевезення, чи ще й розмитнення однієї або обох сторін, страхування.</li>
       <li>Уточнити точне місце переходу ризику і хто відповідає за документи на кожному відрізку — це знадобиться, якщо виникне претензія.</li>
       <li>Внести правильні умови (хто за що відповідає) явно в заявку і за потреби — в договір, а не покладатися на «зрозуміло само собою».</li>
-    </ol>
-    <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
-  </section>
-
-  <section id="ctv10-case" style="border-bottom:none;">
-    <h2>Практичний кейс</h2>
-    <div class="case-box">
-      <div class="case-label">Ситуація</div>
-      <p>Клієнт — виробник меблів у Польщі — звертається з проханням організувати перевезення партії товару до складу покупця в Одесі. У контракті купівлі-продажу вказано умову CIP Одеса. Клієнт просить прорахувати «просто перевезення» і уточнює, що не хоче розбиратися зі страхуванням.</p>
-    </div>
-    <p><b>Завдання — дай собі відповідь перед тим, як звірити з куратором:</b></p>
-    <ol class="steps">
-      <li>Хто в цій угоді юридичний замовник SIBWAY — продавець чи покупець?</li>
-      <li>Які послуги SIBWAY зобов'язана врахувати в пропозиції, зважаючи на умову CIP, навіть якщо клієнт про них не згадав?</li>
-      <li>Якщо вантаж пошкодиться в дорозі — хто за документами є постраждалою стороною і подаватиме претензію?</li>
     </ol>
     <a class="back-top" data-target="ctv10-indexNav">↑ до переліку</a>
   </section>
