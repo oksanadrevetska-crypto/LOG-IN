@@ -1,0 +1,208 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv15{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv15, .ctv15 *{box-sizing:border-box;}
+  .ctv15{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv15 header.hero{padding:32px 0 24px; border-bottom:2px solid var(--navy);}
+  .ctv15 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv15 h1{font-size:24px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv15 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0;}
+
+  .ctv15 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv15 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv15 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv15 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv15 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv15 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv15 section:last-of-type{border-bottom:none;}
+  .ctv15 h2{font-size:16.5px; font-weight:700; color:var(--navy); margin:0 0 6px;}
+  .ctv15 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv15 .back-top{display:inline-block; margin-top:8px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv15 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv15 .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; margin:12px 0;}
+  .ctv15 table.doc-table{width:100%; min-width:480px; border-collapse:collapse; font-size:13px;}
+  .ctv15 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv15 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv15 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv15 table.doc-table td.key{font-weight:600; color:var(--navy); white-space:nowrap;}
+
+  .ctv15 .example-box{background:#fff; border:1px solid var(--line); border-radius:6px; padding:16px 18px; margin:14px 0;}
+  .ctv15 .example-box .msg{background:var(--table-stripe); border-radius:6px; padding:10px 14px; font-style:italic; color:var(--navy); font-size:13px; margin-bottom:12px;}
+  .ctv15 .example-box .conclusion{margin-top:10px; padding-top:10px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-soft); text-align:justify;}
+  .ctv15 .example-box .conclusion b{color:var(--navy);}
+</style>
+
+<div class="ctv15">
+
+  <header class="hero" id="ctv15-top">
+    <p class="kicker">Модуль 3 · Робота з клієнтом: кваліфікація та продажі</p>
+    <h1>Приклади аналізу запитів клієнтів</h1>
+    <div class="lead">
+      <p>Як за коротким повідомленням клієнта відновити повну картину потреби — з реальними прикладами.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv15-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv15-indexGrid">
+      <a data-target="ctv15-frame">Рамка аналізу</a>
+      <a data-target="ctv15-ex1">Приклад 1</a>
+      <a data-target="ctv15-ex2">Приклад 2</a>
+      <a data-target="ctv15-ex3">Приклад 3</a>
+      <a data-target="ctv15-ex4">Приклад 4</a>
+    </div>
+  </nav>
+
+  <section id="ctv15-frame">
+    <h2>Навіщо аналізувати запит</h2>
+    <p>Клієнт рідко пише повний запит одразу. Завдання логіста — за кількома реченнями відновити всю картину: що везти, звідки-куди, коли, наскільки це регулярно, чи є спецумови, хто приймає рішення і яка больова точка стоїть за запитом. Це основа для правильних уточнювальних питань і точної комерційної пропозиції.</p>
+
+    <h2 style="margin-top:20px;">Рамка аналізу — 8 параметрів</h2>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>№</th><th>Параметр</th><th>Навіщо</th></tr></thead>
+        <tbody>
+          <tr><td class="key">1</td><td>Тип вантажу</td><td>Визначає тип транспорту і потенційні спецумови.</td></tr>
+          <tr><td class="key">2</td><td>Вага / обсяг</td><td>Впливає на вибір транспорту й розрахунок вартості.</td></tr>
+          <tr><td class="key">3</td><td>Маршрут (звідки → куди)</td><td>Основа для розрахунку ставки та підбору перевізника.</td></tr>
+          <tr><td class="key">4</td><td>Терміновість / дата завантаження</td><td>Визначає пріоритет запиту і можливість підібрати авто вчасно.</td></tr>
+          <tr><td class="key">5</td><td>Регулярність</td><td>Разовий запит чи потенціал на регулярні відвантаження.</td></tr>
+          <tr><td class="key">6</td><td>Спецумови</td><td>Температурний режим, ADR, негабарит — потребують окремого підбору транспорту.</td></tr>
+          <tr><td class="key">7</td><td>Хто на зв'язку (ОПР чи ні)</td><td>Визначає, чи потрібно виходити на особу, що приймає рішення.</td></tr>
+          <tr><td class="key">8</td><td>Больова точка / сигнал у тексті</td><td>Підказує, який аргумент використати в пропозиції.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-top" data-target="ctv15-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv15-ex1">
+    <h2>Приклад 1. Постійний клієнт, стандартний вантаж</h2>
+    <div class="example-box">
+      <div class="msg">«Доброго дня! Потрібна фура під меблі, 20 палет, Гданськ — Київ. Завантаження краще в четвер, у нас так щомісяця виходить, останні півроку возимо через вас».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Тип вантажу</td><td>Меблі в коробках на палетах — стандартний тентований транспорт</td></tr>
+            <tr><td class="key">Вага/обсяг</td><td>20 палет — орієнтовно повна фура, уточнити точну вагу</td></tr>
+            <tr><td class="key">Маршрут</td><td>Гданськ (Польща) → Київ</td></tr>
+            <tr><td class="key">Терміновість</td><td>Завантаження в четвер — конкретна дата, стандартний термін підготовки</td></tr>
+            <tr><td class="key">Регулярність</td><td>Щомісячний регулярний клієнт — пріоритетний, вже працює з SIBWAY</td></tr>
+            <tr><td class="key">Спецумови</td><td>Не зазначено, тентового транспорту достатньо</td></tr>
+            <tr><td class="key">Хто на зв'язку</td><td>Ймовірно постійний контакт клієнта — вже знає процес</td></tr>
+            <tr><td class="key">Больова точка</td><td>Немає прямого сигналу — клієнт лояльний, головне не зірвати звичний графік</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion"><b>Висновок і наступний крок:</b> Стандартна заявка постійного клієнта. Уточнити точну вагу й контакти вантажовідправника, підтвердити дату — і одразу переходити до пошуку авто, без розгорнутого виявлення потреб.</div>
+    </div>
+    <a class="back-top" data-target="ctv15-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv15-ex2">
+    <h2>Приклад 2. Новий клієнт, чутливий вантаж</h2>
+    <div class="example-box">
+      <div class="msg">«Добрий день. Розглядаємо нового перевізника для молочної продукції з Німеччини. Головне — щоб не підвела температура і щоб машина точно приїхала, коли обіцяли, бо в нас були проблеми з попереднім перевізником».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Тип вантажу</td><td>Молочна продукція — обов'язково рефрижератор</td></tr>
+            <tr><td class="key">Вага/обсяг</td><td>Не зазначено — уточнити</td></tr>
+            <tr><td class="key">Маршрут</td><td>Німеччина → (уточнити місто призначення)</td></tr>
+            <tr><td class="key">Терміновість</td><td>Не зазначено — уточнити дату завантаження</td></tr>
+            <tr><td class="key">Регулярність</td><td>Невідомо, клієнт «розглядає» — потенціал на регулярні перевезення, підтвердити при розмові</td></tr>
+            <tr><td class="key">Спецумови</td><td>Температурний режим — критична вимога, згадана прямим текстом</td></tr>
+            <tr><td class="key">Хто на зв'язку</td><td>Не зазначено — уточнити посаду співрозмовника</td></tr>
+            <tr><td class="key">Больова точка</td><td>Прямий сигнал: негативний досвід із попереднім перевізником (запізнення) — страх «неорганізованої доставки»</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion"><b>Висновок і наступний крок:</b> Це новий клієнт із явною больовою точкою — ненадійність попереднього перевізника. У пропозиції й розмові варто прямо закрити цей страх: конкретні гарантії термінів, контроль температури, регулярне інформування про статус.</div>
+    </div>
+    <a class="back-top" data-target="ctv15-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv15-ex3">
+    <h2>Приклад 3. Заперечення «вже працюю з іншими»</h2>
+    <div class="example-box">
+      <div class="msg">«Дякую за пропозицію, але ми вже співпрацюємо з перевізником, нас все влаштовує». (Далі в розмові клієнт зазначає: «хоча буває, що машину шукають довше, ніж хотілося б»).</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Тип вантажу, вага, маршрут</td><td>Не встановлено — контакт ще не дійшов до деталей запиту</td></tr>
+            <tr><td class="key">Терміновість / регулярність</td><td>Невідомо — клієнт наразі не готовий говорити про конкретний вантаж</td></tr>
+            <tr><td class="key">Спецумови</td><td>Невідомо</td></tr>
+            <tr><td class="key">Хто на зв'язку</td><td>Уточнити посаду</td></tr>
+            <tr><td class="key">Больова точка</td><td>Пряме заперечення «все влаштовує», але одразу після нього — прихований сигнал незадоволення швидкістю підбору авто</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion"><b>Висновок і наступний крок:</b> Формальна відмова, але фраза про довгий пошук машини — реальна больова точка. Правильна дія: не наполягати на негайному переході, а запропонувати SIBWAY як «резервного» перевізника саме на випадок затримок, і зафіксувати клієнта в робочій таблиці для контакту за тиждень.</div>
+    </div>
+    <a class="back-top" data-target="ctv15-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv15-ex4" style="border-bottom:none;">
+    <h2>Приклад 4. Негабарит, рішення приймає власник</h2>
+    <div class="example-box">
+      <div class="msg">«Треба перевезти будівельну колону, 14 метрів завдовжки, з Чехії. Я власник компанії, питання зараз веду особисто, бо вантаж дорогий і специфічний».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Тип вантажу</td><td>Негабаритна будівельна конструкція — потрібен трал і спецдозволи</td></tr>
+            <tr><td class="key">Вага/обсяг</td><td>Не зазначено — критично уточнити вагу для підбору транспорту й дозволів</td></tr>
+            <tr><td class="key">Маршрут</td><td>Чехія → (уточнити місто призначення)</td></tr>
+            <tr><td class="key">Терміновість</td><td>Не зазначено — уточнити, негабарит вимагає більше часу на підготовку дозволів</td></tr>
+            <tr><td class="key">Регулярність</td><td>Схоже на разове перевезення дорогого специфічного вантажу</td></tr>
+            <tr><td class="key">Спецумови</td><td>Негабарит — пряма вказівка в тексті</td></tr>
+            <tr><td class="key">Хто на зв'язку</td><td>Власник компанії — найвищий рівень ОПР, підвищена увага до якості комунікації</td></tr>
+            <tr><td class="key">Больова точка</td><td>Непряма — «вантаж дорогий і специфічний», отже клієнт боїться помилки виконавця</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="conclusion"><b>Висновок і наступний крок:</b> Розмова з власником компанії за дорогим негабаритним вантажем вимагає компетентної, впевненої комунікації без «здогадок» — усі технічні деталі (габарити, маршрут, дозволи) уточнюються одразу й точно.</div>
+    </div>
+    <a class="back-top" data-target="ctv15-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv15ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv15 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv15ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

@@ -1,0 +1,307 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv17{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv17, .ctv17 *{box-sizing:border-box;}
+  .ctv17{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv17 header.hero{padding:32px 0 24px; border-bottom:2px solid var(--navy);}
+  .ctv17 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv17 h1{font-size:24px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv17 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0;}
+
+  .ctv17 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv17 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv17 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv17 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv17 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv17 section.doc{padding:30px 0; border-bottom:2px solid var(--navy); scroll-margin-top:16px;}
+  .ctv17 section.doc:last-of-type{border-bottom:none;}
+  .ctv17 section.doc > h2{font-size:20px; font-weight:700; color:var(--navy); margin:0 0 14px;}
+  .ctv17 h3{font-size:15px; font-weight:700; color:var(--navy); margin:20px 0 8px; scroll-margin-top:16px;}
+  .ctv17 h3:first-of-type{margin-top:4px;}
+  .ctv17 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv17 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv17 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv17 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv17 ol.steps{margin:0 0 10px; padding-left:20px; display:grid; gap:6px;}
+  .ctv17 ol.steps li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv17 ol.steps li::marker{color:var(--peach-ink); font-weight:700;}
+  .ctv17 .back-top{display:inline-block; margin-top:8px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv17 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv17 .principle-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px; margin:12px 0;}
+  .ctv17 .principle-grid .card{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:12px 15px;}
+  .ctv17 .principle-grid .card .pn{font-size:11px; font-weight:700; color:var(--peach-ink);}
+  .ctv17 .principle-grid .card b{display:block; color:var(--navy); font-size:13.5px; margin:3px 0 4px;}
+  .ctv17 .principle-grid .card span{font-size:12px; color:var(--ink-soft);}
+
+  .ctv17 .flow-steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin:12px 0;}
+  .ctv17 .flow-steps .step{background:#fff; border:1px solid var(--line); border-radius:6px; padding:12px 14px;}
+  .ctv17 .flow-steps .step .sn{width:22px; height:22px; border-radius:50%; background:var(--navy); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:6px;}
+  .ctv17 .flow-steps .step b{display:block; color:var(--navy); font-size:13px; margin-bottom:3px;}
+  .ctv17 .flow-steps .step span{font-size:12px; color:var(--ink-soft);}
+
+  .ctv17 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:12px 0;}
+  @media (max-width:600px){ .ctv17 .two-col{grid-template-columns:1fr;} }
+  .ctv17 .do-dont{border-radius:6px; padding:14px 16px;}
+  .ctv17 .do-dont.do{background:#EAF6EC; border:1px solid #9ECBA6;}
+  .ctv17 .do-dont.dont{background:#FBEAEA; border:1px solid #E0A0A0;}
+  .ctv17 .do-dont .dtitle{font-size:12.5px; font-weight:700; margin:0 0 8px;}
+  .ctv17 .do-dont.do .dtitle{color:#2E7D46;}
+  .ctv17 .do-dont.dont .dtitle{color:#A33A3A;}
+  .ctv17 .do-dont ul{margin:0; padding-left:18px; display:grid; gap:5px;}
+  .ctv17 .do-dont li{font-size:12.5px; text-align:left; color:var(--ink-soft);}
+
+  .ctv17 .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; margin:12px 0;}
+  .ctv17 table.doc-table{width:100%; min-width:480px; border-collapse:collapse; font-size:13px;}
+  .ctv17 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv17 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv17 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv17 table.doc-table td.key{font-weight:600; color:var(--navy); white-space:nowrap;}
+
+  .ctv17 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:13px 16px; margin:12px 0;}
+  .ctv17 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+
+  .ctv17 .template-box{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:14px 18px; margin:12px 0;}
+  .ctv17 .template-box .ttitle{font-size:13px; font-weight:700; color:var(--navy); margin:0 0 8px;}
+  .ctv17 .template-box .when{font-size:11.5px; color:var(--ink-faint); font-style:italic; margin:0 0 10px;}
+  .ctv17 .template-box .body{background:#fff; border:1px solid var(--line); border-radius:6px; padding:12px 14px; font-size:12.5px; color:var(--ink); line-height:1.7;}
+</style>
+
+<div class="ctv17">
+
+  <header class="hero" id="ctv17-top">
+    <p class="kicker">Модуль 3 · Робота з клієнтом: кваліфікація та продажі</p>
+    <h1>Діловий етикет, телефонні переговори та комерційні пропозиції</h1>
+    <div class="lead">
+      <p>Як манера спілкування формує довіру клієнта ще до підписання угоди, і готові шаблони, коли й яку комерційну пропозицію надсилати.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv17-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv17-indexGrid">
+      <a data-target="ctv17-etiquette">Діловий етикет</a>
+      <a data-target="ctv17-templates">Рекомендації створення КП</a>
+    </div>
+  </nav>
+
+  <!-- ============ 3.10 ДІЛОВИЙ ЕТИКЕТ ============ -->
+  <section class="doc" id="ctv17-etiquette">
+    <h2>Діловий етикет та телефонні переговори</h2>
+
+    <h3>Навіщо це потрібно</h3>
+    <p>У логістиці клієнт і перевізник не бачать менеджера особисто — все враження про компанію формується голосом по телефону, тоном листування і швидкістю реакції. Манера спілкування — це така ж частина сервісу, як швидкість прорахунку чи якість перевезення.</p>
+
+    <h3>4 принципи ділового етикету</h3>
+    <div class="principle-grid">
+      <div class="card"><span class="pn">01</span><b>Пунктуальність</b><span>Дзвони і відповідай вчасно, дотримуйся обіцяних термінів прорахунку та відповіді</span></div>
+      <div class="card"><span class="pn">02</span><b>Ввічливість і повага</b><span>Спокійний тон незалежно від настрою співрозмовника, звертання на ім'я</span></div>
+      <div class="card"><span class="pn">03</span><b>Чіткість мовлення</b><span>Без слів-паразитів, коротко і по суті, зрозуміла структура розмови</span></div>
+      <div class="card"><span class="pn">04</span><b>Конфіденційність</b><span>Комерційні умови, ціни та дані клієнтів не обговорюються з третіми особами</span></div>
+    </div>
+
+    <h3>Основи розмови по телефону</h3>
+    <ul class="doc-list">
+      <li><b>Відповідай до 3-го гудка</b> — швидка реакція сигналізує про увагу до клієнта чи перевізника.</li>
+      <li><b>Привітання + назва компанії + ім'я</b> — «Добрий день, компанія Sibway Logistics, мене звати …».</li>
+      <li><b>Помірний темп мовлення</b> — не поспішай, дай співрозмовнику встигнути за думкою.</li>
+      <li><b>Посмішка в голосі</b> — навіть по телефону тон стає теплішим і доброзичливішим.</li>
+    </ul>
+
+    <h3>4 етапи ділової телефонної розмови</h3>
+    <div class="flow-steps">
+      <div class="step"><div class="sn">1</div><b>Привітання</b><span>Представлення себе і компанії, встановлення контакту</span></div>
+      <div class="step"><div class="sn">2</div><b>Мета дзвінка</b><span>Коротко: навіщо дзвониш, що потрібно з'ясувати</span></div>
+      <div class="step"><div class="sn">3</div><b>Суть розмови</b><span>Деталі заявки, умови, уточнення, відповіді на питання</span></div>
+      <div class="step"><div class="sn">4</div><b>Підсумок</b><span>Домовленості, наступний крок, ввічливе прощання</span></div>
+    </div>
+    <div class="callout"><p>Не переходь одразу до суті — коротке представлення економить час обом сторонам у довгостроковій перспективі.</p></div>
+
+    <h3>Що можна і чого варто уникати під час дзвінка</h3>
+    <div class="two-col">
+      <div class="do-dont do">
+        <p class="dtitle">РОБИ</p>
+        <ul>
+          <li>Слухай уважно, не перебивай</li>
+          <li>Фіксуй ключові деталі одразу в робочій таблиці</li>
+          <li>Уточнюй незрозуміле питаннями</li>
+          <li>Тримай доброзичливий, рівний тон</li>
+          <li>Резюмуй домовленості наприкінці</li>
+        </ul>
+      </div>
+      <div class="do-dont dont">
+        <p class="dtitle">НЕ РОБИ</p>
+        <ul>
+          <li>Говорити з їжею або відволікатись</li>
+          <li>Перебивати або підвищувати голос</li>
+          <li>Обіцяти те, що неможливо виконати</li>
+          <li>Використовувати сленг чи слова-паразити</li>
+          <li>Закінчувати дзвінок без чіткого підсумку</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Як зберігати спокій у складній розмові</h3>
+    <p>Незадоволений клієнт чи роздратований перевізник — частина роботи. Головне — не приймати емоції на свій рахунок.</p>
+    <div class="flow-steps">
+      <div class="step"><div class="sn">1</div><b>Активне слухання</b><span>Дай людині висловитись повністю, не перебивай навіть якщо не згоден</span></div>
+      <div class="step"><div class="sn">2</div><b>Визнання емоції</b><span>«Розумію ваше занепокоєння» — без визнання провини, але з повагою</span></div>
+      <div class="step"><div class="sn">3</div><b>Перехід до фактів</b><span>М'яко переводь розмову від емоцій до конкретики: що саме сталось</span></div>
+      <div class="step"><div class="sn">4</div><b>Пропозиція рішення</b><span>Завжди закінчуй конкретним наступним кроком, а не виправданням</span></div>
+    </div>
+
+    <h3>Етикет листування (email, чати)</h3>
+    <ul class="doc-list">
+      <li><b>Час відповіді:</b> на робочі повідомлення відповідай протягом години; якщо потрібен час — підтверди отримання одразу.</li>
+      <li><b>Структура листа:</b> привітання → суть → конкретне прохання/дія → ввічливе завершення.</li>
+      <li><b>Тон повідомлень:</b> без CAPS LOCK, зайвих знаків оклику чи різкості навіть у стресовій ситуації.</li>
+      <li><b>Грамотність:</b> перевіряй текст перед відправкою — помилки знижують довіру до компанії.</li>
+    </ul>
+
+    <h3>Ключові техніки ведення переговорів</h3>
+    <ul class="doc-list">
+      <li><b>Активне слухання:</b> перефразовуй сказане: «Тобто вам потрібно…» — показує увагу і виключає непорозуміння.</li>
+      <li><b>Відкриті запитання:</b> «Які умови для вас критичні?» замість закритих «так/ні» — дає більше інформації для угоди.</li>
+      <li><b>Пошук спільної вигоди:</b> шукай рішення, вигідне обом сторонам, а не тільки перемогу в ціні.</li>
+      <li><b>Робота із запереченнями:</b> заперечення — це запит на додаткову інформацію, а не відмова.</li>
+    </ul>
+
+    <h3>Типові помилки</h3>
+    <ul class="doc-list">
+      <li>Занадто швидка або монотонна мова — співрозмовник втрачає нитку розмови.</li>
+      <li>Обіцянки «зателефоную пізніше» без фактичного дзвінка.</li>
+      <li>Перехід одразу до ціни без з'ясування реальних потреб.</li>
+      <li>Виправдання замість конкретного рішення проблеми.</li>
+      <li>Відсутність підсумку домовленостей наприкінці розмови.</li>
+    </ul>
+
+    <h3>5 золотих правил ділового спілкування</h3>
+    <ol class="steps">
+      <li>Відповідай швидко — і на дзвінки, і на повідомлення.</li>
+      <li>Завжди вітайся, називай компанію та своє ім'я.</li>
+      <li>Слухай більше, ніж говориш, і уточнюй незрозуміле.</li>
+      <li>Тримай спокійний тон навіть у конфліктній ситуації.</li>
+      <li>Завершуй розмову чітким підсумком домовленостей.</li>
+    </ol>
+    <div class="callout"><p>Ваш голос і слово — це обличчя компанії.</p></div>
+
+    <a class="back-top" data-target="ctv17-indexNav">↑ до переліку</a>
+  </section>
+
+  <!-- ============ 3.13 РЕКОМЕНДАЦІЇ КП ============ -->
+  <section class="doc" id="ctv17-templates">
+    <h2>Рекомендації створення КП</h2>
+    <p>Шаблони комерційної пропозиції SIBWAY під кожну ситуацію + практичний кейс.</p>
+
+    <h3>Який шаблон коли використовувати</h3>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Ситуація</th><th>Шаблон</th></tr></thead>
+        <tbody>
+          <tr><td>Перший контакт із новою компанією, ОПР невідомий</td><td class="key">Перше знайомство (лист)</td></tr>
+          <tr><td>Потрапили не на ОПР, треба, щоб переслали</td><td class="key">Вихід на ОПР</td></tr>
+          <tr><td>Швидкий перший контакт, коротко</td><td class="key">SMS</td></tr>
+          <tr><td>Клієнт мовчить/не бачив листа — потрібно зачепити болем</td><td class="key">Лист «больові точки»</td></tr>
+          <tr><td>Потрібно отримати вантаж, щоб зробити прорахунок</td><td class="key">Запит на прорахунок</td></tr>
+          <tr><td>Прорахунок готовий, надсилаєте вперше</td><td class="key">Пропозиція після прорахунку — перше надсилання</td></tr>
+          <tr><td>Клієнт не відповів на прорахунок</td><td class="key">Пропозиція після прорахунку — нагадування</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>5 правил формування КП</h3>
+    <ol class="steps">
+      <li><b>Коротко.</b> Клієнт читає КП 20–30 секунд — довгий текст не читають до кінця.</li>
+      <li><b>Один заклик до дії в кінці.</b> Не «зателефонуйте, напишіть, або залиште заявку» — щось одне: конкретне запитання чи прохання.</li>
+      <li><b>Конкретика замість загальних фраз.</b> «1900 EUR, Роттердам — Київ» переконує більше, ніж «вигідні тарифи».</li>
+      <li><b>Один аргумент під больову точку клієнта</b>, а не всі переваги одразу. Новому клієнту з негативним досвідом — про надійність і терміни; постійному — про регулярність і зручність.</li>
+      <li><b>Персоналізація.</b> Назва компанії, маршрут, тип вантажу клієнта — не безликий текст «для всіх».</li>
+    </ol>
+
+    <h3>Шаблони</h3>
+
+    <div class="template-box">
+      <div class="ttitle">1. Перше знайомство</div>
+      <div class="when">Перший контакт із новою компанією, ОПР невідомий</div>
+      <div class="body">Шановні [Назва компанії],<br>Компанія Sibway Logistics пропонує Вам розглянути нас в якості партнера з надання послуг вантажних автомобільних перевезень. Завдяки багаторічному досвіду на ринку та професіоналізму команди ми забезпечуємо надійне й своєчасне транспортування вантажів.<br><br>Пропонуємо: консолідацію вантажів, перевезення з дотриманням температурного режиму, експрес-доставку, транспортування великовагових вантажів, брокерські послуги.<br><br>Переваги: конкурентні тарифи, прозорість (Ви завжди в курсі місцезнаходження вантажу), професійна підтримка менеджера, страхування вантажів.<br><br>Пропонуємо розпочати співпрацю з прорахунку перевезення за Вашим напрямом.<br>[Телефон] · [Email] · [Сайт]</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">2. Вихід на ЛПР</div>
+      <div class="when">Потрапили не на ОПР, треба, щоб переслали контакт</div>
+      <div class="body">Мене звати [Ім'я], я представляю компанію SIBWAY Logistic — [посада/роль].<br>Ми експерти в міжнародних перевезеннях, доставляємо вантажі в будь-якому напрямку.<br><br>Чому працювати з нами: конкурентні тарифи, прозорість на всіх етапах перевезення, професійна підтримка менеджера, велика база перевізників, страхування вантажів.<br><br>Прошу переслати це повідомлення до відділу логістики або надати контакти відповідальної особи для обговорення деталей.<br><br>Дякую за співпрацю!<br>З повагою, [Ім'я], SIBWAY Logistic<br>[Телефон] · [Email] · sibway.com.ua</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">3. SMS — короткий інтро</div>
+      <div class="when">Швидкий перший контакт, коротко</div>
+      <div class="body">Мене звати [Ім'я], я представляю SIBWAY Logistic. Ми експерти в міжнародних перевезеннях, доставляємо вантажі в будь-якому напрямку з конкурентними тарифами та професійною підтримкою. Прошу переслати це повідомлення до відділу логістики або надати контакти відповідальної особи.</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">4. Лист — больові точки</div>
+      <div class="when">Клієнт мовчить/не бачив листа — потрібно зачепити болем</div>
+      <div class="body">Доброго дня, [Ім'я клієнта]. Чи стикались ви із затримками доставки, псуванням вантажу, непорядністю підрядників чи кабальними умовами договору? З цим стикається більшість, хто організовує доставку самостійно. SIBWAY Logistic бере це на себе — перевірте на практиці. Відповідайте на цей лист, і наш менеджер зателефонує протягом 15 хвилин.<br>З повагою, [Ім'я], SIBWAY Logistic</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">5. Запит на прорахунок</div>
+      <div class="when">Потрібно отримати деталі вантажу, щоб зробити прорахунок</div>
+      <div class="body">Доброго дня, [Ім'я].<br>Мене звати [Ім'я], я менеджер SIBWAY Logistic. Спеціалізуємось на міжнародних перевезеннях у будь-якому напрямку з конкурентними тарифами та професійною підтримкою.<br><br>Пропонуємо консолідацію вантажів, перевезення з температурним режимом, експрес-доставку, транспортування великовагових вантажів, брокерські послуги.<br><br>Пропонуємо розпочати співпрацю з прорахунку перевезення за Вашим напрямом. З ким можна обговорити деталі?<br>З повагою, [Ім'я], SIBWAY Logistic</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">6. Пропозиція після прорахунку — перше надсилання</div>
+      <div class="when">Прорахунок готовий, надсилаєте вперше</div>
+      <div class="body">Доброго дня, [Ім'я].<br>Наші менеджери провели розрахунок для маршруту [маршрут]. Наразі ціна складає [сума].<br><br>Чи маєте інформацію про готовність вантажу і дату, коли потрібне реальне авто?<br>[Телефон] · [Email] · [Сайт]</div>
+    </div>
+
+    <div class="template-box">
+      <div class="ttitle">7. Пропозиція після прорахунку — нагадування</div>
+      <div class="when">Клієнт не відповів на прорахунок</div>
+      <div class="body">Доброго дня, [Ім'я]/[Назва компанії],<br>Наші менеджери провели розрахунок для маршруту [маршрут]. Наразі ціна складає [сума]. Будемо вдячні за зворотний зв'язок щодо цього прорахунку.<br><br>Чи маєте інші запити до розрахунку або вантажі для пошуку реального авто?<br>[Телефон] · [Email] · [Сайт]</div>
+    </div>
+
+    <a class="back-top" data-target="ctv17-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv17ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv17 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv17ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

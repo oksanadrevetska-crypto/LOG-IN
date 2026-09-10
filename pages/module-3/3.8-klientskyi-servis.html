@@ -1,0 +1,226 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv14{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv14, .ctv14 *{box-sizing:border-box;}
+  .ctv14{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv14 header.hero{padding:32px 0 24px; border-bottom:2px solid var(--navy);}
+  .ctv14 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv14 h1{font-size:24px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv14 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0;}
+
+  .ctv14 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv14 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv14 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv14 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv14 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv14 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv14 section:last-of-type{border-bottom:none;}
+  .ctv14 h2{font-size:20px; font-weight:700; color:var(--navy); margin:0 0 6px;}
+  .ctv14 h3{font-size:15.5px; font-weight:700; color:var(--navy); margin:24px 0 8px; scroll-margin-top:16px;}
+  .ctv14 h3:first-of-type{margin-top:4px;}
+  .ctv14 h4{font-size:13px; font-weight:700; color:var(--navy-light); margin:14px 0 6px;}
+  .ctv14 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv14 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv14 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv14 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv14 .back-top{display:inline-block; margin-top:8px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv14 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv14 .script-box{background:var(--table-stripe); border-left:3px solid var(--navy); border-radius:0 6px 6px 0; padding:12px 16px; margin:10px 0;}
+  .ctv14 .script-box .who{font-size:11px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:.03em; margin-bottom:4px;}
+  .ctv14 .script-box p{margin:0; font-style:italic; color:var(--navy); font-size:13.5px; text-align:left;}
+
+  .ctv14 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:12px 16px; margin:10px 0;}
+  .ctv14 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+
+  .ctv14 .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; margin:12px 0;}
+  .ctv14 table.doc-table{width:100%; min-width:480px; border-collapse:collapse; font-size:13px;}
+  .ctv14 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv14 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv14 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv14 table.doc-table td.key{font-weight:600; color:var(--navy); white-space:nowrap;}
+</style>
+
+<div class="ctv14">
+
+  <header class="hero" id="ctv14-top">
+    <p class="kicker">Модуль 3 · Робота з клієнтом: кваліфікація та продажі</p>
+    <h1>Клієнтський сервіс і продажі</h1>
+    <div class="lead">
+      <p>Готові скрипти для кожного етапу — від першого дзвінка до запиту рекомендації, з поясненням, чому кожна репліка працює саме так.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv14-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv14-indexGrid">
+      <a data-target="ctv14-after">Комунікація після перевезення</a>
+      <a data-target="ctv14-recs">Запит рекомендацій</a>
+      <a data-target="ctv14-sale">Скрипт продажу послуг</a>
+      <a data-target="ctv14-lead">Скрипт вхідного ліда</a>
+      <a data-target="ctv14-needs">Скрипт виявлення потреб</a>
+      <a data-target="ctv14-objections">Скрипт відпрацювання заперечень</a>
+      <a data-target="ctv14-hidden">Прихована першопричина</a>
+    </div>
+  </nav>
+
+  <section id="ctv14-after">
+    <h3>Комунікація з клієнтом після перевезення</h3>
+    <p>Мета — не «звітувати», а вчасно зловити невдоволення (поки воно не переросло в мовчазну втрату клієнта) і відкрити шлях до повторного продажу.</p>
+    <div class="script-box">
+      <div class="who">Менеджер</div>
+      <p>«Добрий день, [ім'я]! Це [ім'я], SIBWAY. Хочу дізнатися, як пройшло отримання вантажу [маршрут] — усе відповідало очікуванням?»</p>
+    </div>
+    <h4>Якщо все добре</h4>
+    <p>Подякувати й одразу перейти до запиту рекомендації або запитати про майбутні плани — не втрачати момент найвищої лояльності клієнта.</p>
+    <h4>Якщо є зауваження</h4>
+    <p>Зафіксувати конкретику, не виправдовуватися одразу — вислухати, визнати, запропонувати рішення з термінами.</p>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-recs">
+    <h3>Запит рекомендацій</h3>
+    <p>Просити рекомендацію можна тільки після підтвердженого позитивного досвіду — ніколи одразу після проблемного рейсу, навіть якщо він урешті вирішився добре.</p>
+    <div class="script-box">
+      <div class="who">Менеджер</div>
+      <p>«Радий це чути! Якщо є колеги чи партнери, яким може знадобитися надійний перевізник — буду вдячний за рекомендацію. Можете переслати мій контакт або підказати, до кого можна звернутися?»</p>
+    </div>
+    <ul class="doc-list">
+      <li>Альтернатива — запит короткого відгуку для внутрішнього використання компанії (сайт, презентації для нових клієнтів).</li>
+      <li>Не наполягати, якщо клієнт ухиляється, — одна спроба за один контакт, без тиску.</li>
+    </ul>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-sale">
+    <h3>Скрипт продажу транспортних послуг SIBWAY</h3>
+    <p>Базовий каркас дзвінка — від відкриття до закриття на наступний крок. Використовується і для вихідних дзвінків новим компаніям, і як структура для розмови з лідом, що вже залишив контакт.</p>
+    <div class="script-box">
+      <div class="who">Менеджер (відкриття)</div>
+      <p>«Доброго дня! Мене звати [ім'я], я представляю SIBWAY — міжнародні автомобільні перевезення. Ми допомагаємо компаніям на кшталт вашої налагодити стабільну доставку вантажів без зривів термінів і зайвого клопоту з документами. У вас зараз є актуальні відправлення чи плануєте найближчим часом?»</p>
+    </div>
+    <p>Далі — виявлення потреб, потім комерційна пропозиція за узгодженим шаблоном.</p>
+    <div class="script-box">
+      <div class="who">Менеджер (закриття на наступний крок)</div>
+      <p>«Дякую за інформацію. Я підготую пропозицію з розрахунком під ваш маршрут і надішлю сьогодні. Зручно буде обговорити деталі завтра після обіду?»</p>
+    </div>
+    <div class="callout"><p>Закриття завжди на конкретний наступний крок і час — «я зв'яжусь пізніше» не рахується завершеним дзвінком.</p></div>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-lead">
+    <h3>Скрипт обробки вхідного ліда</h3>
+    <p>Відрізняється від скрипту повторного дзвінка з бази: тут клієнт звертається вперше сам (форма на сайті, дзвінок, рекомендація) — довіра ще не встановлена, тому перші секунди важливіші.</p>
+    <div class="script-box">
+      <div class="who">Менеджер</div>
+      <p>«Добрий день! Дякую, що звернулися до SIBWAY. Мене звати [ім'я], я допоможу організувати ваше перевезення. Можу задати кілька коротких питань, щоб одразу підготувати точну пропозицію?»</p>
+    </div>
+    <ul class="doc-list">
+      <li>Швидкість реакції на вхідний лід критична — в ідеалі відповідь протягом години в робочий час.</li>
+      <li>Після згоди клієнта — одразу у виявлення потреб, не розтягувати «знайомство» на весь дзвінок.</li>
+    </ul>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-needs">
+    <h3>Скрипт виявлення потреб клієнта</h3>
+    <p>Питання йдуть по наростанню — від фактів до наслідків, щоб клієнт сам сформулював, чому надійність важливіша за найнижчу ціну.</p>
+
+    <h4>Ситуаційні питання (факти)</h4>
+    <ul class="doc-list">
+      <li>Який вантаж плануєте відправити — тип, вага, обсяг?</li>
+      <li>Звідки й куди, яка бажана дата завантаження?</li>
+      <li>Це разове перевезення чи плануєте регулярні відправлення?</li>
+    </ul>
+    <h4>Проблемні питання (больові точки)</h4>
+    <ul class="doc-list">
+      <li>Чи стикались раніше із затримками, пошкодженням вантажу чи проблемами в комунікації з перевізником?</li>
+      <li>Що для вас найважливіше в цьому перевезенні — швидкість, ціна чи надійність і контроль?</li>
+    </ul>
+    <h4>Питання про наслідки</h4>
+    <ul class="doc-list">
+      <li>Що станеться для вашого бізнесу, якщо вантаж запізниться на кілька днів?</li>
+      <li>Наскільки критичні терміни доставки саме для цієї угоди?</li>
+    </ul>
+    <h4>Питання про рішення</h4>
+    <ul class="doc-list">
+      <li>Якби перевезення проходило без затримок і з постійним інформуванням про статус — це закрило б основні незручності?</li>
+    </ul>
+    <div class="callout"><p>Відповіді на проблемні питання — це прямий місток до аргументів із профілю клієнта: менеджер запам'ятовує сказану больову точку і повертається до неї в комерційній пропозиції.</p></div>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-objections">
+    <h3>Скрипт відпрацювання заперечень</h3>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Заперечення клієнта</th><th>Що відповідати</th></tr></thead>
+        <tbody>
+          <tr><td class="key">«Дорого»</td><td>Не знижувати ціну одразу — повернутися до цінності: «Наша ціна включає контроль на кожному етапі й гарантії — давайте порівняємо не тільки цифру, а що входить у пропозицію».</td></tr>
+          <tr><td class="key">«Уже працюю з іншою компанією»</td><td>Не тиснути на розрив стосунків — запропонувати SIBWAY як резервний варіант: «Це чудово. Можу залишити свій контакт як запасний варіант на випадок, якщо поточний партнер підведе з термінами чи авто?»</td></tr>
+          <tr><td class="key">«Треба подумати»</td><td>Це не відповідь, а прикриття — з'ясувати реальну причину: «Звісно. Щоб я міг допомогти прийняти рішення — що саме викликає сумнів: ціна, терміни чи щось інше?»</td></tr>
+          <tr><td class="key">«Надішліть на пошту, я подивлюсь»</td><td>Не завершувати дзвінок без наступного кроку: «Обов'язково надішлю зараз. Коли вам зручно, щоб я передзвонив обговорити деталі — завтра чи післязавтра?»</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv14-hidden" style="border-bottom:none;">
+    <h3>Прихована першопричина заперечень</h3>
+    <p>Формальне заперечення клієнта рідко є справжньою причиною відмови. «Треба подумати» чи «дорого» — це прикриття, за яким стоїть конкретний острах чи сумнів.</p>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Що каже клієнт</th><th>Що часто стоїть за цим</th></tr></thead>
+        <tbody>
+          <tr><td class="key">«Дорого»</td><td>Не бачить різниці між SIBWAY і дешевшою альтернативою — не сумнів у ціні, а нерозуміння цінності.</td></tr>
+          <tr><td class="key">«Треба подумати»</td><td>Побоювання нового постачальника: чи не підведе з термінами, чи буде на зв'язку — страх «неорганізованої доставки».</td></tr>
+          <tr><td class="key">«Все влаштовує з поточним перевізником»</td><td>Часто прихована незадоволеність (повільний підбір авто, слабка комунікація), яку клієнт не озвучує прямим текстом.</td></tr>
+          <tr><td class="key">«Надішліть на пошту»</td><td>Ввічлива форма «не зараз» — клієнт ще не бачить достатньої причини витрачати час на розмову.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><p>Правило: не сперечатися з формальним запереченням — з'ясовувати, що за ним стоїть, і відповідати саме на приховану причину, а не на слова буквально.</p></div>
+    <a class="back-top" data-target="ctv14-indexNav">↑ до переліку</a>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  function ctv14ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv14 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv14ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>

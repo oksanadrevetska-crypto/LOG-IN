@@ -1,0 +1,388 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  .ctv16{
+    --navy: #1F3864;
+    --navy-light: #2E75B6;
+    --ink: #1A1A1A;
+    --ink-soft: #4C5A65;
+    --ink-faint: #8593A0;
+    --line: #D9E2EC;
+    --table-stripe: #EAF1F8;
+    --peach-bg: #FDECE1;
+    --peach-border: #E8853B;
+    --peach-ink: #B85C1F;
+  }
+  html{scroll-behavior:smooth;}
+  .ctv16, .ctv16 *{box-sizing:border-box;}
+  .ctv16{
+    font-family:'Montserrat', Arial, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    max-width:860px;
+    margin:0 auto;
+    padding:0 4px 60px;
+  }
+
+  .ctv16 header.hero{padding:32px 0 24px; border-bottom:2px solid var(--navy);}
+  .ctv16 .kicker{color:var(--peach-ink); font-weight:700; font-size:13px; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px;}
+  .ctv16 h1{font-size:24px; font-weight:700; color:var(--navy); margin:0 0 12px;}
+  .ctv16 .lead p{font-size:14.5px; color:var(--ink-soft); text-align:justify; margin:0 0 8px;}
+
+  .ctv16 nav.index{margin:24px 0 6px; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .ctv16 nav.index .index-title{padding:10px 16px; font-size:11.5px; font-weight:600; text-transform:uppercase; letter-spacing:.03em; color:var(--navy); background:var(--table-stripe);}
+  .ctv16 .index-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+  .ctv16 .index-grid a{display:block; padding:10px 16px; text-decoration:none; color:var(--ink); border-top:1px solid var(--line); border-right:1px solid var(--line); font-size:13px; cursor:pointer; transition:background .12s ease, color .12s ease, padding-left .12s ease;}
+  .ctv16 .index-grid a:hover{background:var(--peach-bg); color:var(--peach-ink); padding-left:20px;}
+
+  .ctv16 section{padding:26px 0; border-bottom:1px solid var(--line); scroll-margin-top:16px;}
+  .ctv16 section:last-of-type{border-bottom:none;}
+  .ctv16 h2{font-size:19px; font-weight:700; color:var(--navy); margin:0 0 10px;}
+  .ctv16 h3{font-size:14.5px; font-weight:700; color:var(--navy-light); margin:18px 0 8px;}
+  .ctv16 h3:first-of-type{margin-top:4px;}
+  .ctv16 p{font-size:13.5px; color:var(--ink-soft); text-align:justify; margin:0 0 10px;}
+  .ctv16 ul.doc-list{margin:0 0 10px; padding-left:20px; display:grid; gap:5px;}
+  .ctv16 ul.doc-list li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv16 ul.doc-list li::marker{color:var(--navy-light);}
+  .ctv16 ol.steps{margin:0 0 10px; padding-left:20px; display:grid; gap:6px;}
+  .ctv16 ol.steps li{font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv16 ol.steps li::marker{color:var(--peach-ink); font-weight:700;}
+  .ctv16 .back-top{display:inline-block; margin-top:8px; font-size:11.5px; color:var(--ink-faint); text-decoration:none; border-bottom:1px solid var(--line); cursor:pointer;}
+  .ctv16 .back-top:hover{color:var(--peach-ink); border-color:var(--peach-border);}
+
+  .ctv16 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:12px 0;}
+  @media (max-width:600px){ .ctv16 .two-col{grid-template-columns:1fr;} }
+  .ctv16 .compare-card{border-radius:6px; padding:14px 16px;}
+  .ctv16 .compare-card.bad{background:#FBEAEA; border:1px solid #E0A0A0;}
+  .ctv16 .compare-card.good{background:#EAF6EC; border:1px solid #9ECBA6;}
+  .ctv16 .compare-card .ctitle{font-size:13px; font-weight:700; margin:0 0 8px;}
+  .ctv16 .compare-card.bad .ctitle{color:#A33A3A;}
+  .ctv16 .compare-card.good .ctitle{color:#2E7D46;}
+  .ctv16 .compare-card ul{margin:0; padding-left:18px; display:grid; gap:5px;}
+  .ctv16 .compare-card li{font-size:12.5px; text-align:left; color:var(--ink-soft);}
+
+  .ctv16 .tech-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:12px 0;}
+  .ctv16 .tech-card{background:var(--table-stripe); border:1px solid var(--line); border-radius:6px; padding:13px 16px;}
+  .ctv16 .tech-card .tnum{font-size:11px; font-weight:700; color:var(--peach-ink); text-transform:uppercase;}
+  .ctv16 .tech-card .tname{font-size:14px; font-weight:700; color:var(--navy); margin:3px 0 6px;}
+  .ctv16 .tech-card p{margin:0; font-size:12.5px; text-align:left;}
+
+  .ctv16 .benefit-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:12px 0;}
+  .ctv16 .benefit-grid .card{background:#fff; border:1px solid var(--line); border-radius:6px; padding:12px 15px;}
+  .ctv16 .benefit-grid .card b{display:block; color:var(--navy); font-size:13px; margin-bottom:4px;}
+  .ctv16 .benefit-grid .card span{font-size:12.5px; color:var(--ink-soft); text-align:left; display:block;}
+
+  .ctv16 .call-example{border:1px solid var(--line); border-radius:6px; padding:14px 16px; margin:12px 0;}
+  .ctv16 .call-example .client-line{font-style:italic; color:var(--navy); font-size:13px; background:var(--table-stripe); padding:10px 14px; border-radius:6px; margin-bottom:12px;}
+
+  .ctv16 .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:6px; margin:12px 0;}
+  .ctv16 table.doc-table{width:100%; min-width:480px; border-collapse:collapse; font-size:13px;}
+  .ctv16 table.doc-table th{background:var(--navy); color:#fff; text-align:left; padding:9px 12px; font-size:12px;}
+  .ctv16 table.doc-table td{padding:9px 12px; border-bottom:1px solid var(--line); color:var(--ink-soft); vertical-align:top;}
+  .ctv16 table.doc-table tr:nth-child(even) td{background:var(--table-stripe);}
+  .ctv16 table.doc-table td.key{font-weight:600; color:var(--navy); white-space:nowrap;}
+
+  .ctv16 .callout{background:var(--peach-bg); border:1px solid var(--peach-border); border-radius:6px; padding:13px 16px; margin:12px 0;}
+  .ctv16 .callout p{margin:0; color:var(--peach-ink); font-weight:600; font-size:13px; text-align:left;}
+
+  .ctv16 .example-box{background:#fff; border:1px solid var(--line); border-radius:6px; padding:16px 18px; margin:14px 0;}
+  .ctv16 .example-box .msg{background:var(--table-stripe); border-radius:6px; padding:10px 14px; font-style:italic; color:var(--navy); font-size:13px; margin-bottom:12px;}
+
+  .ctv16 ul.check{list-style:none; padding:0; margin:12px 0; display:grid; gap:8px;}
+  .ctv16 ul.check li{position:relative; padding-left:24px; font-size:13.5px; color:var(--ink-soft); text-align:justify;}
+  .ctv16 ul.check li::before{content:"✓"; position:absolute; left:0; top:0; color:var(--navy-light); font-weight:700;}
+
+  .ctv16 footer.closing{padding:28px 0 6px; text-align:center; border-bottom:none;}
+  .ctv16 footer.closing p{text-align:center; max-width:56ch; margin:0 auto; font-style:italic;}
+</style>
+
+<div class="ctv16">
+
+  <header class="hero" id="ctv16-top">
+    <p class="kicker">Модуль 3 · Робота з клієнтом: кваліфікація та продажі</p>
+    <h1>Активне слухання та виявлення потреб клієнта</h1>
+    <div class="lead">
+      <p>Виявлення потреб клієнта складається з двох рівноважливих частин: правильних питань і уважного слухання відповідей. Питання без слухання перетворюються на анкету; слухання без структурованих питань — на приємну розмову без результату.</p>
+    </div>
+  </header>
+
+  <nav class="index" id="ctv16-indexNav">
+    <div class="index-title">Швидкий перехід</div>
+    <div class="index-grid" id="ctv16-indexGrid">
+      <a data-target="ctv16-what">Що таке активне слухання</a>
+      <a data-target="ctv16-why">Навіщо це менеджеру</a>
+      <a data-target="ctv16-techniques">4 техніки</a>
+      <a data-target="ctv16-example">Приклад у дзвінку</a>
+      <a data-target="ctv16-questions">Питання за 5 рівнями</a>
+      <a data-target="ctv16-cases">Приклади аналізу запитів</a>
+      <a data-target="ctv16-algorithm">Як поєднати на практиці</a>
+      <a data-target="ctv16-mistakes">Типові помилки</a>
+      <a data-target="ctv16-checklist">Підсумковий чек-лист</a>
+    </div>
+  </nav>
+
+  <section id="ctv16-what">
+    <h2>Що таке активне слухання?</h2>
+    <p>Це не просто мовчати, поки говорить клієнт. Це усвідомлена робота: почути зміст, зрозуміти контекст і показати клієнту, що його почули — словами, а не здогадками. Мета — не почути паузу, щоб заговорити самому, а справді зрозуміти потребу клієнта.</p>
+    <div class="two-col">
+      <div class="compare-card bad">
+        <p class="ctitle">Пасивне слухання</p>
+        <ul>
+          <li>Чує слова, але не запитує деталей</li>
+          <li>Думає про свою наступну репліку</li>
+          <li>Перебиває, щоб швидше перейти до пропозиції</li>
+          <li>Клієнт відчуває, що говорить «у порожнечу»</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <p class="ctitle">Активне слухання</p>
+        <ul>
+          <li>Уточнює деталі конкретним питанням</li>
+          <li>Перефразовує почуте, щоб підтвердити розуміння</li>
+          <li>Дає клієнту договорити до кінця</li>
+          <li>Клієнт відчуває, що його дійсно почули</li>
+        </ul>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-why">
+    <h2>Навіщо це менеджеру SIBWAY</h2>
+    <p>Активне слухання — не м'яка навичка «для галочки», а прямий інструмент продажів і утримання клієнта.</p>
+    <div class="benefit-grid">
+      <div class="card"><b>Точніше виявляєте потребу</b><span>Розумієте реальний запит клієнта, а не той, який вам здалося</span></div>
+      <div class="card"><b>Будуєте довіру</b><span>Клієнт відчуває увагу до себе — фундамент довгострокової співпраці</span></div>
+      <div class="card"><b>Менше непорозумінь</b><span>Менше повторних дзвінків через невірно зрозумілі умови чи маршрут</span></div>
+      <div class="card"><b>Більше повторних продажів</b><span>Точна інформація про клієнта одразу стає основою наступної пропозиції</span></div>
+    </div>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-techniques">
+    <h2>4 техніки активного слухання</h2>
+    <p>Ці чотири техніки застосовуються в парі з кожним питанням із розділу нижче — питання відкриває інформацію, а техніка слухання її закріплює.</p>
+    <div class="tech-grid">
+      <div class="tech-card"><div class="tnum">Техніка 1</div><div class="tname">Перефразування</div><p>«Тобто якщо я правильно розумію, вам актуальні напрямки на Німеччину, приблизно 3 рейси на місяць?»</p></div>
+      <div class="tech-card"><div class="tnum">Техніка 2</div><div class="tname">Уточнюючі питання</div><p>Одне конкретне питання замість здогадки: «Які саме обсяги ви зазвичай возите?»</p></div>
+      <div class="tech-card"><div class="tnum">Техніка 3</div><div class="tname">Пауза без перебивання</div><p>Даємо клієнту договорити повністю, навіть якщо відповідь вже здається зрозумілою</p></div>
+      <div class="tech-card"><div class="tnum">Техніка 4</div><div class="tname">Підсумовування</div><p>Наприкінці розмови коротко повторюємо ключові домовленості — фіксуємо спільне розуміння</p></div>
+    </div>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-example">
+    <h2>Як це звучить у дзвінку</h2>
+    <div class="call-example">
+      <div class="client-line">Клієнт каже: «У нас зараз багато вантажів на Німеччину, але з поточним перевізником постійно затримки на завантаженні.»</div>
+      <div class="two-col">
+        <div class="compare-card bad">
+          <p class="ctitle">Без активного слухання</p>
+          <p style="font-size:12.5px; font-style:italic; margin-bottom:8px;">«Зрозуміло! У нас якраз є вигідні тарифи на Німеччину, можу одразу зробити прорахунок?»</p>
+          <ul>
+            <li>Проігноровано скаргу на затримки</li>
+            <li>Клієнт не відчув, що його почули</li>
+            <li>Втрачено сильний аргумент для пропозиції (надійність по термінах)</li>
+          </ul>
+        </div>
+        <div class="compare-card good">
+          <p class="ctitle">З активним слуханням</p>
+          <p style="font-size:12.5px; font-style:italic; margin-bottom:8px;">«Тобто головна проблема саме в затримках на завантаженні, а не в самій ціні перевезення, правильно розумію? Як часто це трапляється?»</p>
+          <ul>
+            <li>Підтверджено розуміння реальної проблеми</li>
+            <li>Клієнт відчуває, що ситуацію сприймають серйозно</li>
+            <li>З'явився факт для сильної пропозиції — гарантія вчасної подачі транспорту</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-questions">
+    <h2>Питання для виявлення потреб — 5 рівнів глибини</h2>
+    <p>Рухаємося зверху вниз: не можна ставити питання рівня 3, поки не отримано відповідь на питання рівня 1.</p>
+
+    <h3>Рівень 1 — Ситуаційні питання</h3>
+    <p style="font-size:12.5px;">Мета: зрозуміти поточну ситуацію клієнта із перевезеннями, без оцінки й без тиску.</p>
+    <ul class="doc-list">
+      <li>«Як зараз організовано логістику у вашій компанії — власний транспорт, підрядники, чи і те, і те?»</li>
+      <li>«Які напрямки перевезень для вас зараз основні?»</li>
+      <li>«Який приблизний обсяг вантажів ви відправляєте чи отримуєте щомісяця?»</li>
+      <li>«З якими типами вантажу ви зазвичай працюєте?»</li>
+      <li>«Чи є сезонність у ваших обсягах перевезень?»</li>
+    </ul>
+
+    <h3>Рівень 2 — Проблемні питання</h3>
+    <p style="font-size:12.5px;">Мета: виявити труднощі чи незадоволення поточним рішенням клієнта.</p>
+    <ul class="doc-list">
+      <li>«Чи бувають ситуації, коли поточний перевізник чи власний транспорт не справляється з обсягом?»</li>
+      <li>«Що найчастіше викликає труднощі в поточній організації перевезень — терміни, ціна, документи, комунікація?»</li>
+      <li>«Чи траплялися випадки затримки вантажу або проблем на кордоні?»</li>
+      <li>«Наскільки прозоро ви бачите статус вантажу під час перевезення зараз?»</li>
+      <li>«Чи доводилося відмовляти власним клієнтам через нестачу транспорту в потрібний момент?»</li>
+    </ul>
+
+    <h3>Рівень 3 — Питання про наслідки</h3>
+    <p style="font-size:12.5px;">Мета: допомогти клієнту усвідомити реальну вартість проблеми — не для тиску, а щоб пропозиція далі була по суті.</p>
+    <ul class="doc-list">
+      <li>«Як затримки на кордоні впливають на ваші зобов'язання перед вашими клієнтами?»</li>
+      <li>«У що обходиться компанії ситуація, коли транспорту не вистачає в пікові періоди?»</li>
+      <li>«Чи впливає нестача прозорості статусів на планування вашого власного виробництва чи продажів?»</li>
+    </ul>
+
+    <h3>Рівень 4 — Конкретизуючі питання</h3>
+    <p style="font-size:12.5px;">Мета: зібрати технічну конкретику, достатню для формування пропозиції чи брифу.</p>
+    <div class="table-wrap">
+      <table class="doc-table">
+        <thead><tr><th>Що з'ясовуємо</th><th>Питання</th></tr></thead>
+        <tbody>
+          <tr><td class="key">Маршрут</td><td>Звідки і куди саме потрібне перевезення? Це разовий маршрут чи регулярний напрямок?</td></tr>
+          <tr><td class="key">Вантаж</td><td>Який тип вантажу, вага, об'єм, спосіб упаковки (палети, наливний, сипучий)?</td></tr>
+          <tr><td class="key">Терміни</td><td>Яка бажана дата завантаження і крайній термін доставки?</td></tr>
+          <tr><td class="key">Тип транспорту</td><td>Чи потрібен спеціалізований транспорт — рефрижератор, цистерна, негабарит? (якщо доречно з контексту)</td></tr>
+          <tr><td class="key">Додаткові послуги</td><td>Чи потрібна допомога з митним оформленням, страхуванням, складським зберіганням?</td></tr>
+          <tr><td class="key">Бюджет</td><td>Чи є орієнтир по бюджету або з чим порівнюєте вартість перевезення?</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Рівень 5 — Питання про формат подальшої взаємодії</h3>
+    <ul class="doc-list">
+      <li>«Як вам зручніше отримувати статуси під час перевезення — дзвінок, email чи месенджер?»</li>
+      <li>«Хто, крім вас, приймає рішення щодо вибору перевізника?»</li>
+      <li>«Як часто вам зазвичай потрібні перевезення — щоб ми могли планувати комунікацію заздалегідь?»</li>
+    </ul>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-cases">
+    <h2>Приклади аналізу запитів клієнтів</h2>
+    <p>Чотири типові ситуації — від чіткого технічного запиту до розмитого повідомлення в месенджері.</p>
+
+    <div class="example-box">
+      <h3 style="margin-top:0;">Кейс 1. Чіткий технічний запит</h3>
+      <div class="msg">«Потрібно перевезти 20 тонн будматеріалів з Кракова до Києва, терміново».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Що вже відомо</td><td>Маршрут (Краків → Київ), вага (20 т), тип вантажу (будматеріали)</td></tr>
+            <tr><td class="key">Чого бракує</td><td>Точна дата завантаження, тип упаковки, чи потрібен спецтранспорт, разова угода чи регулярна</td></tr>
+            <tr><td class="key">Ризик</td><td>«Терміново» клієнт і менеджер можуть розуміти по-різному — обов'язково уточнити точну дату</td></tr>
+            <tr><td class="key">Що запитати</td><td>«Тобто вам потрібно оперативно забрати вантаж — яка точна дата найбільш реалістична для завантаження?» + питання рівня 4</td></tr>
+            <tr><td class="key">Техніка слухання</td><td>Перефразування терміну «терміново» в конкретну дату — знімає ризик різного розуміння дедлайну</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3 style="margin-top:0;">Кейс 2. Запит з емоційним підтекстом</h3>
+      <div class="msg">«Ми вже кілька разів працювали з перевізниками, але постійно виникають проблеми з документами на кордоні — це нас дуже втомило».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Що вже відомо</td><td>Є досвід перевезень, негативний досвід із документообігом, явне емоційне забарвлення («втомило»)</td></tr>
+            <tr><td class="key">Чого бракує</td><td>Конкретний маршрут, обсяги, тип вантажу — розмова поки на рівні проблеми</td></tr>
+            <tr><td class="key">Ризик</td><td>Одразу переходити до ціни, ігноруючи емоційний сигнал — клієнт очікує визнання проблеми, а не пропозиції</td></tr>
+            <tr><td class="key">Що запитати</td><td>«Розумію, це дійсно виснажує. Які саме документи найчастіше викликають затримку — можете навести приклад останнього випадку?»</td></tr>
+            <tr><td class="key">Техніка слухання</td><td>Спочатку визнати емоцію словами, і лише потім перейти до уточнюючого питання</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3 style="margin-top:0;">Кейс 3. Розмите повідомлення в месенджері</h3>
+      <div class="msg">«Добрий день, потрібна вантажівка на Німеччину».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Що вже відомо</td><td>Напрямок (Німеччина), більше практично нічого</td></tr>
+            <tr><td class="key">Чого бракує</td><td>Конкретне місто/регіон, тип і вага вантажу, дата, тип транспорту, разовий запит чи регулярний клієнт</td></tr>
+            <tr><td class="key">Ризик</td><td>Ставити відразу 5–6 питань одним повідомленням — клієнт у месенджері очікує коротких послідовних питань, а не анкети</td></tr>
+            <tr><td class="key">Що запитати</td><td>«Доброго дня! Підкажіть, будь ласка, звідки і в яке місто Німеччини потрібно доставити вантаж, і яка орієнтовна вага?» — решта уточнюється далі</td></tr>
+            <tr><td class="key">Техніка слухання</td><td>У текстовому форматі «слухання» — це темп і кількість запитань за раз: по одному-два, дочекатися відповіді</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="example-box">
+      <h3 style="margin-top:0;">Кейс 4. Постійний клієнт зі зміненим запитом</h3>
+      <div class="msg">«Як завжди, потрібен рейс на Варшаву, тільки цього разу обсяг більший — десь удвічі».</div>
+      <div class="table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><td class="key">Що вже відомо</td><td>Маршрут відомий з історії (Варшава), є базовий обсяг для порівняння, клієнт сигналізує про зростання</td></tr>
+            <tr><td class="key">Чого бракує</td><td>Точний новий обсяг («удвічі» — орієнтовно), чи потрібен інший тип транспорту, разове зростання чи постійне</td></tr>
+            <tr><td class="key">Ризик</td><td>Покластися на «як завжди» і не перепитати — саме зміна обсягу є сигналом для перегляду типу транспорту (LTL→FTL)</td></tr>
+            <tr><td class="key">Що запитати</td><td>«Супер, зростання — це чудово! Уточніть, будь ласка, точний обсяг цього разу — це разове збільшення чи так буде і надалі?»</td></tr>
+            <tr><td class="key">Техніка слухання</td><td>Не приймати «як завжди» за повну інформацію — звична фраза найчастіше приховує зміну, яку варто уточнити</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-algorithm">
+    <h2>Як поєднати питання й слухання на практиці</h2>
+    <ol class="steps">
+      <li>Почніть з питання рівня 1 (ситуація) — не переходьте одразу до конкретики, поки не зрозуміли загальний контекст.</li>
+      <li>Вислухайте відповідь повністю, не перебиваючи, навіть якщо вона довша, ніж очікувалося.</li>
+      <li>Перефразуйте почуте одним реченням, перш ніж ставити наступне питання.</li>
+      <li>Якщо в відповіді прозвучала емоція (роздратування, втома, ентузіазм) — визнайте її словами, перш ніж переходити далі.</li>
+      <li>Переходьте на рівень глибше лише тоді, коли попередній рівень дав достатньо інформації.</li>
+      <li>Завершіть підсумовуванням: коротко повторіть зібрані факти і узгодьте наступний крок.</li>
+    </ol>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-mistakes">
+    <h2>Типові помилки</h2>
+    <ul class="doc-list">
+      <li>Перебивати клієнта, щойно почули знайоме слово чи фразу.</li>
+      <li>Думати про свою наступну репліку замість того, щоб слухати поточну.</li>
+      <li>Ставити лише закриті питання («так/ні») там, де потрібні деталі.</li>
+      <li>Ігнорувати емоційний тон клієнта (роздратування, поспіх, невпевненість).</li>
+      <li>Не фіксувати почуте — і повторно перепитувати те, що клієнт уже сказав.</li>
+    </ul>
+    <a class="back-top" data-target="ctv16-indexNav">↑ до переліку</a>
+  </section>
+
+  <section id="ctv16-checklist" style="border-bottom:none;">
+    <h2>Підсумковий чек-лист</h2>
+    <ul class="check">
+      <li>Почав розмову з питання про загальну ситуацію, а не одразу з деталей запиту.</li>
+      <li>Дав клієнту договорити повністю, не перебивав.</li>
+      <li>Уточнив хоча б одну деталь конкретним питанням на кожен розмитий чи неповний запит.</li>
+      <li>Перефразував хоча б одну ключову відповідь, щоб підтвердити розуміння.</li>
+      <li>Визнав емоційний підтекст, якщо він був присутній у відповіді.</li>
+      <li>Зібрав достатньо технічної конкретики (маршрут, вантаж, терміни) для передачі в роботу.</li>
+      <li>Підсумував ключові домовленості наприкінці розмови й зафіксував їх письмово одразу після дзвінка.</li>
+    </ul>
+  </section>
+
+  <footer class="closing">
+    <p>Слухати — це теж навичка продажів. Чим уважніше ви чуєте клієнта сьогодні — тим точнішою і сильнішою буде ваша пропозиція завтра.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  function ctv16ScrollTo(id){
+    var el = document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  var links = document.querySelectorAll('.ctv16 [data-target]');
+  for (var i=0; i<links.length; i++){
+    links[i].addEventListener('click', function(e){
+      e.preventDefault();
+      ctv16ScrollTo(this.getAttribute('data-target'));
+      return false;
+    });
+  }
+})();
+</script>
